@@ -1,0 +1,45 @@
+services:
+    node-red:
+        depends_on:
+            - influx
+        container_name: nodered
+        build: 
+            context: ./nodered_image
+            dockerfile: Dockerfile
+        # image: nodered/node-red
+        environment:
+            - TZ=Europe/Amsterdam
+            - FLOWS=flows.json
+        ports:
+            - 1880:1880
+        volumes:
+            - ./nodered-data:/data
+
+    influx:
+        container_name: influx
+        image: influxdb:latest
+        ports:
+            - "8086:8086"
+        # command: /bin/bash /init-influxdb.sh
+        volumes:
+            - influx-storage:/var/lib/influxdb
+            - ./influx-data/init-influxdb.sh:/init-influxdb.sh
+
+    # Service to inicialitze InfluxDB (https://github.com/julian-fh/influxdb-setup)
+    influx-setup:
+        image: "julianfh/influxdb-setup:latest"
+        depends_on:
+            - influx
+        environment:
+            TIMEOUT: 20
+            INFLUXDB_SCHEMA: http
+            INFLUXDB_HOST: influx
+            INFLUXDB_PORT: 8086
+            INFLUXDB_TOKEN: some-token
+            INFLUXDB_BUCKETID: some-bucket
+            INFLUXDB_ORG: cie
+            INFLUXDB_USER: acraf
+            INFLUXDB_PW: verysecurepassword1
+            INFLUXDB_RETENTION: 1d
+volumes:
+    influx-storage:
