@@ -2,7 +2,7 @@ services:
     node-red:
         depends_on:
             - influx
-        container_name: nodered
+        container_name: nodered-spc
         build: 
             context: ./nodered_image
             dockerfile: Dockerfile
@@ -16,8 +16,8 @@ services:
             - ./nodered-data:/data
 
     influx:
-        container_name: influx
-        image: influxdb:latest
+        container_name: influx-spc
+        image: "quay.io/influxdb/influxdb:2.0.0-rc"
         ports:
             - "8086:8086"
         # command: /bin/bash /init-influxdb.sh
@@ -33,7 +33,7 @@ services:
         environment:
             TIMEOUT: 20
             INFLUXDB_SCHEMA: http
-            INFLUXDB_HOST: influx
+            INFLUXDB_HOST: influx-spc
             INFLUXDB_PORT: 8086
             INFLUXDB_TOKEN: some-token
             INFLUXDB_BUCKETID: some-bucket
