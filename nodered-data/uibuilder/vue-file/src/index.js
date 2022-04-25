@@ -18,6 +18,8 @@
 */
 'use strict'
 
+
+
 /** @see https://github.com/TotallyInformation/node-red-contrib-uibuilder/wiki/Front-End-Library---available-properties-and-methods */
 
 // eslint-disable-next-line no-unused-vars
@@ -67,5 +69,53 @@ var app1 = new Vue({
     } // --- End of mounted hook --- //
 
 }) // --- End of app1 --- //
+
+Vue.component('v-chart', VueECharts)
+
+var app2 = new Vue({
+    el: '#appgrafica',
+
+    /** Load external component files
+     *  Make sure there is no leading / in the name
+     *  To load from the common folder use like: 'common/component-name.vue' */
+    components: {
+        'grafica': httpVueLoader('grafica.vue'),
+    }, // --- End of components --- //
+
+    data: {
+    }, // --- End of data --- //
+
+    computed: {
+    }, // --- End of computed --- //
+
+    methods: {
+    }, // --- End of methods --- //
+
+    // Available hooks: init,mounted,updated,destroyed
+    mounted: function(){
+        /** **REQUIRED** Start uibuilder comms with Node-RED @since v2.0.0-dev3
+         * Pass the namespace and ioPath variables if hosting page is not in the instance root folder
+         * e.g. If you get continual `uibuilderfe:ioSetup: SOCKET CONNECT ERROR` error messages.
+         * e.g. uibuilder.start('/nr/uib', '/nr/uibuilder/vendor/socket.io') // change to use your paths/names
+         */
+        uibuilder.start()
+
+        var vueApp = this
+
+        // Process new messages from Node-RED
+        // uibuilder.onChange('msg', function (msg) {
+        //     // We are assuming that msg.payload is an number between zero and 10
+
+        //     // Change value
+        //     if (msg.payload.hasOwnProperty('greeting')) vueApp.myGreeting = msg.payload.greeting
+        //     if (msg.payload.hasOwnProperty('who')) vueApp.myWho = msg.payload.who
+
+        //     //console.log(msg)
+        // })
+
+    } // --- End of mounted hook --- //
+
+}) // --- End of app1 --- //
+
 
 // EOF
