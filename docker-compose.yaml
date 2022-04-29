@@ -35,11 +35,12 @@ services:
             INFLUXDB_SCHEMA: http
             INFLUXDB_HOST: influx-spc
             INFLUXDB_PORT: 8086
-            INFLUXDB_TOKEN: some-token
-            INFLUXDB_BUCKETID: some-bucket
+            INFLUXDB_TOKEN: cie-token
+            INFLUXDB_BUCKETID: cel86
             INFLUXDB_ORG: cie
-            INFLUXDB_USER: acraf
+            INFLUXDB_USER: admin
             INFLUXDB_PW: verysecurepassword1
             INFLUXDB_RETENTION: 1d
 volumes:
     influx-storage:
+    

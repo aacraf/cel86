@@ -29,6 +29,7 @@ USER root
 RUN apt-get install -y python3-dev python3-pip python3-setuptools python3-wheel
 RUN apt-get install -y python3-numpy python3-pandas 
 RUN pip3 install pandas 
+RUN pip3 install 'influxdb-client[ciso]'
 
 # Install base utilities
 # RUN apt-get update && \
