@@ -3,7 +3,7 @@ services:
         depends_on:
             - influx
         container_name: nodered-spc
-        build: 
+        build:
             context: ./nodered_image
             dockerfile: Dockerfile
         # image: nodered/node-red
@@ -43,4 +43,3 @@ services:
             INFLUXDB_RETENTION: 1d
 volumes:
     influx-storage:
-    
