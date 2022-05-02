@@ -1,45 +1,40 @@
 services:
-    node-red:
-        depends_on:
-            - influx
-        container_name: nodered-spc
-        build:
-            context: ./nodered_image
-            dockerfile: Dockerfile
-        # image: nodered/node-red
-        environment:
-            - TZ=Europe/Amsterdam
-            - FLOWS=flows.json
-        ports:
-            - 1880:1880
-        volumes:
-            - ./nodered-data:/data
-
-    influx:
-        container_name: influx-spc
-        image: "quay.io/influxdb/influxdb:2.0.0-rc"
-        ports:
-            - "8086:8086"
-        # command: /bin/bash /init-influxdb.sh
-        volumes:
-            - influx-storage:/var/lib/influxdb
-            - ./influx-data/init-influxdb.sh:/init-influxdb.sh
-
-    # Service to inicialitze InfluxDB (https://github.com/julian-fh/influxdb-setup)
-    influx-setup:
-        image: "julianfh/influxdb-setup:latest"
-        depends_on:
-            - influx
-        environment:
-            TIMEOUT: 20
-            INFLUXDB_SCHEMA: http
-            INFLUXDB_HOST: influx-spc
-            INFLUXDB_PORT: 8086
-            INFLUXDB_TOKEN: cie-token
-            INFLUXDB_BUCKETID: cel86
-            INFLUXDB_ORG: cie
-            INFLUXDB_USER: admin
-            INFLUXDB_PW: verysecurepassword1
-            INFLUXDB_RETENTION: 1d
+  node-red:
+    depends_on:
+      - influx
+    container_name: nodered-spc
+    build:
+      context: ./nodered_image
+      dockerfile: Dockerfile
+    environment:
+      - TZ=Europe/Amsterdam
+      - FLOWS=flows.json
+    ports:
+      - '1880:1880'
+    volumes:
+      - './nodered-data:/data'
+  influx:
+    container_name: influx-spc
+    image: 'quay.io/influxdb/influxdb:2.0.0-rc'
+    ports:
+      - '8086:8086'
+    volumes:
+      - 'influx-storage:/var/lib/influxdb'
+      - './influx-data/init-influxdb.sh:/init-influxdb.sh'
+  influx-setup:
+    image: 'julianfh/influxdb-setup:latest'
+    depends_on:
+      - influx
+    environment:
+      TIMEOUT: 20
+      INFLUXDB_SCHEMA: http
+      INFLUXDB_HOST: influx-spc
+      INFLUXDB_PORT: 8086
+      INFLUXDB_TOKEN: cie-token
+      INFLUXDB_BUCKETID: cel86
+      INFLUXDB_ORG: cie
+      INFLUXDB_USER: admin
+      INFLUXDB_PW: verysecurepassword1
+      INFLUXDB_RETENTION: 1d
 volumes:
-    influx-storage:
+  influx-storage: null
