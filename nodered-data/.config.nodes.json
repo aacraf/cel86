@@ -598,25 +598,6 @@
             }
         }
     },
-    "node-red-contrib-python-function": {
-        "name": "node-red-contrib-python-function",
-        "version": "0.0.5",
-        "local": false,
-        "user": false,
-        "nodes": {
-            "python-function": {
-                "name": "python-function",
-                "types": [
-                    "python-function"
-                ],
-                "enabled": true,
-                "local": false,
-                "user": false,
-                "module": "node-red-contrib-python-function",
-                "file": "/usr/src/node-red/node_modules/node-red-contrib-python-function/lib/python-function.js"
-            }
-        }
-    },
     "node-red-contrib-s7": {
         "name": "node-red-contrib-s7",
         "version": "3.1.0",

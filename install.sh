@@ -56,9 +56,10 @@ fi
 
 apt-get install -y git
 
-git clone https://github.com/aacraf/spcapp.git
+git clone https://github.com/node-red/node-red-docker.git
 
-source spcapp/nodered_image/docker-debian.sh
+chmod +x spcapp/nodered_image/docker-debian.sh
+bash spcapp/nodered_image/docker-debian.sh
 
 docker run -d -p 1880:1880 -v node_red_data:/data --name myNRtest testing:node-red-build
 

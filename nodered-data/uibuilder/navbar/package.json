@@ -5,25 +5,23 @@
   "main": "app.js",
   "scripts": {
     "dev": "parcel watch ./src/index.html --public-url ./  --no-cache --out-dir ./dist/",
-    "build": "rm -rf ./dist/* && parcel build ./src/index.html --public-url ./  --no-cache --out-dir ./dist/ --detailed-report",
-    "watch": "watch 'npm run build' ./src"
+    "build": "rm -rf ./dist/* && parcel build ./src/index.html --public-url ./  --no-cache --out-dir ./dist/ --detailed-report"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apexcharts": "^3.35.0",
     "bootstrap-vue": "^2.21.2",
-    "echarts": "^5.3.2",
+    "chart.js": "^3.7.1",
     "vue": "^2.6.14",
-    "vue-echarts": "^6.0.2",
+    "vue-apexcharts": "^1.6.2",
+    "vue-chartjs": "^4.0.7",
     "vue-hot-reload-api": "^2.3.4",
     "vue-json-pretty": "^1.8.2",
-    "vue-router": "^3.5.2",
-    "watch": "^1.0.2"
+    "vue-router": "^3.5.2"
   },
   "devDependencies": {
-    "@nuxtjs/composition-api": "^0.32.0",
     "@vue/component-compiler-utils": "^3.2.2",
-    "@vue/composition-api": "^1.6.0",
     "cssnano": "^4.1.10",
     "parcel-bundler": "^1.12.5",
     "sass": "^1.32.5",

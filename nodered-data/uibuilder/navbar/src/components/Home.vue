@@ -1,6 +1,10 @@
 <template lang="html">
   <b-container fluid class="pr-5">
     <h2 class="ml-4 mt-4">Home</h2>
+    <p>A ver cuando tarda</p>
+    <p>Pues bastante</P>
+    <p>a vale</p>
+    <p>una ultima vez</p>
   </b-container>
 </template>
 

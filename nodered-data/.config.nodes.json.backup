@@ -598,25 +598,6 @@
             }
         }
     },
-    "node-red-contrib-python-function": {
-        "name": "node-red-contrib-python-function",
-        "version": "0.0.5",
-        "local": false,
-        "user": false,
-        "nodes": {
-            "python-function": {
-                "name": "python-function",
-                "types": [
-                    "python-function"
-                ],
-                "enabled": true,
-                "local": false,
-                "user": false,
-                "module": "node-red-contrib-python-function",
-                "file": "/usr/src/node-red/node_modules/node-red-contrib-python-function/lib/python-function.js"
-            }
-        }
-    },
     "node-red-contrib-s7": {
         "name": "node-red-contrib-s7",
         "version": "3.1.0",
@@ -636,6 +617,47 @@
                 "user": false,
                 "module": "node-red-contrib-s7",
                 "file": "/usr/src/node-red/node_modules/node-red-contrib-s7/red/s7.js"
+            }
+        }
+    },
+    "node-red-contrib-uibuilder": {
+        "name": "node-red-contrib-uibuilder",
+        "version": "5.0.2",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "uibuilder": {
+                "name": "uibuilder",
+                "types": [
+                    "uibuilder"
+                ],
+                "enabled": false,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-uibuilder",
+                "file": "/data/node_modules/node-red-contrib-uibuilder/nodes/uibuilder.js"
+            },
+            "uib-sender": {
+                "name": "uib-sender",
+                "types": [
+                    "uib-sender"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-uibuilder",
+                "file": "/data/node_modules/node-red-contrib-uibuilder/nodes/uib-sender.js"
+            },
+            "uib-cache": {
+                "name": "uib-cache",
+                "types": [
+                    "uib-cache"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-uibuilder",
+                "file": "/data/node_modules/node-red-contrib-uibuilder/nodes/uib-cache.js"
             }
         }
     }

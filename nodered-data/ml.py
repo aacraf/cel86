@@ -10,13 +10,13 @@ import pickle
 
 
 # InfluxDB Credentials
-my_token = "some-token"
+my_token = "cie-token"
 my_org = "cie"
-bucket = "some-bucket"
+bucket = "cel86"
 
 # Data - Retrival
 query= '''
-from(bucket: "some-bucket")
+from(bucket: "cel86")
 |> range(start: -24h)
 |> filter(fn: (r) => r["_measurement"] == "Instalaciones")
 |> filter(fn: (r) => r["molde"] == "MT201")
@@ -41,7 +41,7 @@ med = med[~((med < (Q1 - 1.5 * IQR)) |(med > (Q3 + 1.5 * IQR))).any(axis=1)]
 
 
 # Quality Simulation
-med["Calidad"] = np.random.choice((0,1,2,3), size = len(med), p=(0.1,0.5, 0.2, 0.2))
+med["Calidad"] = np.random.choice((0,1,2,3,4), size = len(med), p=(0.1,0.2, 0.3, 0.2, 0.2))
 
 print(med.head())
 
@@ -74,5 +74,5 @@ print(cm)
 print('Accuracy',accuracy_score(y_test, y_pred))
 
 # Save model
-filename="model.sav"
+filename="/data/models/model.sav"
 pickle.dump(classifier, open(filename,'wb'))

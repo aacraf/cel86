@@ -1,8 +1,10 @@
+version: "3"
 services:
   node-red:
     depends_on:
       - influx
     container_name: nodered-spc
+    user: root
     build:
       context: ./nodered_image
       dockerfile: Dockerfile

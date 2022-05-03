@@ -20,6 +20,18 @@ import VueJsonPretty from 'vue-json-pretty';
 import 'vue-json-pretty/lib/styles.css';
 Vue.component('VueJsonPretty', VueJsonPretty);
 
+
+import VueApexCharts from 'vue-apexcharts'
+Vue.use(VueApexCharts)
+
+Vue.component('apexchart', VueApexCharts)
+
+
+import ECharts from 'vue-echarts'
+import { use } from 'echarts/core'
+
+Vue.component('v-chart', ECharts)
+
 window.uibuilder = uibuilder;
 uibuilder.start('/navbar', '/uibuilder/vendor/socket.io')
 // uibuilder.start()

@@ -2,16 +2,6 @@
   <b-container fluid class="pr-5">
     <h2 class="ml-4 mt-4">Page1</h2>
     <vue-json-pretty :deep="0" :showLength="true" :showDoubleQuotes="false" :showSelectController="true" :deepCollapseChildren="true" :data="msg" > </vue-json-pretty>
-    <ul id="example-1">
-      <li v-for="medicion in msg.payload">
-        {{ medicion.measurement }}
-      </li>
-      <span>aver que pasa aaa aa</span>
-    </ul>
-
-    
-
-
   </b-container>
 </template>
 
