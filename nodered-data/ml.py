@@ -15,13 +15,52 @@ my_org = "cie"
 bucket = "cel86"
 
 # Data - Retrival
-query= '''
-from(bucket: "cel86")
-|> range(start: -24h)
-|> filter(fn: (r) => r["_measurement"] == "Instalaciones")
-|> filter(fn: (r) => r["molde"] == "MT201")
-|> pivot(rowKey:["_time"], columnKey: ["medicion"], valueColumn: "_value")
-|> drop(columns: ["_start", "_stop", "_field", "_measurement", "molde"])'''
+# query= '''
+# from(bucket: "cel86")
+# |> range(start: -24h)
+# |> filter(fn: (r) => r["_measurement"] == "Lubrificador")
+# |> filter(fn: (r) => r["molde"] == "MT201")
+# |> pivot(rowKey:["_time"], columnKey: ["medicion"], valueColumn: "_value")
+# |> drop(columns: ["_start", "_stop", "_field", "_measurement", "molde"])'''
+
+
+query = '''
+join (tables: {
+  a:join (tables: {
+    b:join(tables: {
+      Instalaciones: from(bucket: "cel86")
+        |> range(start: -24h)
+        |>filter(fn: (r) => r["_measurement"] == "Instalaciones") 
+        |> filter(fn: (r) => r["molde"] == "MT201")
+        |> pivot(rowKey:["_time"], columnKey: ["medicion"], valueColumn: "_value")
+        |> drop(columns: ["_start", "_stop", "_field", "molde", "_measurement"])
+      ,
+      Lubrificador: from(bucket: "cel86")
+        |> range(start: -24h)
+        |>filter(fn: (r) => r["_measurement"] == "Lubrificador") 
+        |> filter(fn: (r) => r["molde"] == "MT201")
+        |> pivot(rowKey:["_time"], columnKey: ["medicion"], valueColumn: "_value")
+        |> drop(columns: ["_start", "_stop", "_field", "molde", "_measurement"])
+    },  on: ["_time"] , method: "inner")
+    ,
+    ParametrosInyeccion: from(bucket: "cel86")
+        |> range(start: -24h)
+        |>filter(fn: (r) => r["_measurement"] == "Parametros inyeccion") 
+        |> filter(fn: (r) => r["molde"] == "MT201")
+        |> pivot(rowKey:["_time"], columnKey: ["medicion"], valueColumn: "_value")
+        |> drop(columns: ["_start", "_stop", "_field", "molde", "_measurement"])
+  },  on: ["_time"] , method: "inner")
+  ,
+  TempHornoCubaPiez:from(bucket: "cel86")
+    |> range(start: -24h)
+    |>filter(fn: (r) => r["_measurement"] == "Temp Horno/Cuba/Piez") 
+    |> filter(fn: (r) => r["molde"] == "MT201")
+    |> pivot(rowKey:["_time"], columnKey: ["medicion"], valueColumn: "_value")
+    |> drop(columns: ["_start", "_stop", "_field", "molde", "_measurement"])
+},  on: ["_time"] , method: "inner")
+'''
+
+
 client = InfluxDBClient(url="http://influx-spc:8086/", token=my_token, org=my_org, debug=False)
 med = client.query_api().query_data_frame(org=my_org, query=query)
 med = med.drop(["result", "table", "_time"], axis=1)

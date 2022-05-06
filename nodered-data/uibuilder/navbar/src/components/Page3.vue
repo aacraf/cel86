@@ -28,6 +28,7 @@ export default defineComponent({
       ],
       xaxis: {
         type: 'datetime',
+        max: 10,
       }
     };
   },
@@ -44,7 +45,11 @@ export default defineComponent({
       let datapoint = {x:med.timestamp, y: med.fields.value};
       this.series[0].data.push(datapoint);
       // this.series = [...this.series];
-      this.series = this.series.slice(-5);
+      let newData = this.series[0].data.slice(-100);
+      this.series = [{
+        name: "Flow_CIR_1",
+        data: newData,
+      }];
     },
   },
   mounted() {
