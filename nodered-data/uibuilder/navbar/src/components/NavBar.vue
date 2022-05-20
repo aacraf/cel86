@@ -4,7 +4,7 @@
       <b-navbar-nav>
         <b-nav-text>
           <b-icon-lightning-fill animation="fade" style="animation-duration: 1.75s" scale="1.5" class="text-warning"></b-icon-lightning-fill>
-          <span class="ml-3 mr-5 hvr-buzz-out">Project Name</span>
+          <span class="ml-3 mr-5 hvr-buzz-out">CEL86</span>
         </b-nav-text>
         <b-nav-item to="/" exact :active="$route.name == 'home'">Home</b-nav-item>
         <b-nav-item to="/page1" exact :active="$route.name == 'page1'">Page 1</b-nav-item>

@@ -39,4 +39,4 @@ services:
       INFLUXDB_PW: verysecurepassword1
       INFLUXDB_RETENTION: 1d
 volumes:
-  influx-storage: null
+  influx-storage:

@@ -1,63 +1,34 @@
-<template>
-  <div>
-    <apexchart
-      width="50%"
-      type="line"
-      :options="options"
-      :series="series"
-    ></apexchart>
-  </div>
+<template lang="html">
+  <b-container fluid class="pr-5">
+   <!-- <Grafica medname=0></Grafica>
+   <Grafica medname=1></Grafica> -->
+   <Grafica medname=20></Grafica>
+  </b-container>
 </template>
 
- <script>
-import { defineComponent } from "@vue/composition-api";
+<script>
 
-export default defineComponent({
+import { defineComponent } from "@vue/composition-api";
+import Grafica from "./Grafica.vue";
+export default {
+  name: "page2",
+  components: {
+    Grafica,
+  },
   data() {
     return {
-      options: {
-        chart: {
-          id: "vuechart-example",
-        }
-      },
-      series: [
-        {
-          name: "Flow_CIR_1",
-          data: [],
-        },
-      ],
-      xaxis: {
-        type: 'datetime',
-        max: 10,
-      }
+      // msg: "No Message Received from Node-Red",
     };
   },
-  methods: {
+  methods: {},
 
-    initChart(){
-      // this.series[0].data = [];
-      // for (let i = 0; i < 10; i++) {
-      //   this.series[0].data.push({x:new Date().getTime(), y: Math.random()});
-      // }
-    },
-    updateChart(med) {
-      console.log("updateChart med:", this.series[0].data);
-      let datapoint = {x:med.timestamp, y: med.fields.value};
-      this.series[0].data.push(datapoint);
-      // this.series = [...this.series];
-      let newData = this.series[0].data.slice(-100);
-      this.series = [{
-        name: "Flow_CIR_1",
-        data: newData,
-      }];
-    },
-  },
   mounted() {
-    this.initChart();
     uibuilder.onChange("msg", (newMsg) => {
-      this.updateChart(newMsg.payload[0]);
+      // console.info("Msg received from Node-RED server in Page3:", newMsg);
     });
   },
-});
+};
 </script>
- 
+
+<style scoped>
+</style>

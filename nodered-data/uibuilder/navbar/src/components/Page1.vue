@@ -17,7 +17,7 @@ export default {
 
   mounted() {
     uibuilder.onChange("msg", (newMsg) => {
-      console.info("Msg received from Node-RED server in Page1:", newMsg);
+      // console.info("Msg received from Node-RED server in Page1:", newMsg);
       this.msg = newMsg
     });
   },

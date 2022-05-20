@@ -20,7 +20,7 @@ export default {
 
   mounted() {
     uibuilder.onChange("msg", (newMsg) => {
-      console.info("Msg received from Node-RED server in Home:", newMsg);
+      // console.info("Msg received from Node-RED server in Home:", newMsg);
     });
   },
 };
