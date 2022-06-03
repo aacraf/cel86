@@ -4,6 +4,10 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
+        "@flexdash/node-red-fd-corewidgets": "~0.4.19",
+        "@flexdash/node-red-flexdash": "~0.4.18",
+        "node-red-contrib-function-npm": "~0.4.0",
+        "node-red-contrib-http-instance": "~1.0.1",
         "node-red-contrib-image-tools": "~2.0.4",
         "node-red-contrib-uibuilder": "~5.0.2"
     }

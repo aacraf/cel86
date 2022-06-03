@@ -1,16 +1,16 @@
 <template>
   <div>
-    <b-navbar type="dark" variant="dark">
+    <b-navbar type="light" variant="light">
       <b-navbar-nav>
         <b-nav-text>
-          <b-icon-lightning-fill animation="fade" style="animation-duration: 1.75s" scale="1.5" class="text-warning"></b-icon-lightning-fill>
+          <b-icon-bezier2 animation="fade" style="animation-duration: 1.75s" scale="1.5" class="text-warning"></b-icon-bezier2>
           <span class="ml-3 mr-5 hvr-buzz-out">CEL86</span>
         </b-nav-text>
-        <b-nav-item to="/" exact :active="$route.name == 'home'">Home</b-nav-item>
-        <b-nav-item to="/page1" exact :active="$route.name == 'page1'">Page 1</b-nav-item>
-        <b-nav-item to="/page2" exact :active="$route.name == 'page2'">Page 2</b-nav-item>
-        <b-nav-item to="/page3" exact :active="$route.name == 'page3'">Page 3</b-nav-item>
-        <b-nav-item-dropdown text="Page 4" left :class="{ active: $route.path.startsWith('/page4') }">
+        <b-nav-item to="/" exact :active="$route.name == 'home'">Dashboard</b-nav-item>
+        <b-nav-item to="/page1" exact :active="$route.name == 'page1'">Multivariable</b-nav-item>
+        <b-nav-item to="/page2" exact :active="$route.name == 'page2'">Modelos</b-nav-item>
+        <b-nav-item to="/page3" exact :active="$route.name == 'page3'">Info</b-nav-item>
+        <b-nav-item-dropdown text="Otros" left :class="{ active: $route.path.startsWith('/page4') }">
           <b-dropdown-item to="/page4a" exact :active="$route.name == 'page4a'">Page 4a</b-dropdown-item>
           <b-dropdown-item to="/page4b" exact :active="$route.name == 'page4b'">Page 4b</b-dropdown-item>
         </b-nav-item-dropdown>
@@ -18,14 +18,18 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <b-nav-item>
+          <!-- ESTADO: {{this.estado}} -->
+
+          v0.0
+          
           <!-- v-b-tooltip.hover.left.v-danger="'Shutdown the device !'" -->
-          <b-button
+          <!-- <b-button
             size="sm"
             variant="danger"
             @click="$bvModal.show('modal-shutdown')"
             v-b-tooltip="{ trigger: 'hover', title: 'Shutdown the device', placement: 'left', variant: 'danger' }"
             ><b-icon icon="power"></b-icon
-          ></b-button>
+          ></b-button> -->
         </b-nav-item>
       </b-navbar-nav>
     </b-navbar>
@@ -59,6 +63,13 @@
 
 <script>
 export default {
+  data() {
+    return {
+      estado: "",
+      piezas_ok: 0,
+      // msg: "No Message Received from Node-Red",
+    };
+  },
   methods: {
     shutDown() {
       uibuilder.send({
@@ -66,6 +77,19 @@ export default {
       });
       console.log("Message sent for Shutdown");
     },
+  },
+  mounted() {
+    this.estado = "EN MARCHA"
+    uibuilder.onChange("msg", (newMsg) => {
+        if(this.estado == 0)
+        {
+          this.estado = "PARADA";
+        }
+      // this.estado = newMsg.celstate ? "EN MARCHA" : "PARADA";
+      
+      // this.piezas_ok = newMsg.cel_counter_ok;
+      // console.info("Msg received from Node-RED server in Home:", newMsg);
+    });
   },
 };
 </script>

@@ -6,7 +6,10 @@
 </template>
 <script>
 import { defineComponent } from "@vue/composition-api";
+import moment from "moment";
 
+import 'moment/locale/es'  // without this line it didn't work
+moment.locale('es')
 export default defineComponent({
 
     data() {
@@ -118,7 +121,6 @@ export default defineComponent({
               type: 'treemap',
               events: {
                   click: function(event, chartContext, config) {
-                    // console.log(config.config.series[config.seriesIndex])
                     console.log(config.config.series[config.seriesIndex].name)
                     console.log(config.config.series[config.seriesIndex].data[config.dataPointIndex].x)
                   }        

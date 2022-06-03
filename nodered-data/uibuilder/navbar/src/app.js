@@ -3,14 +3,35 @@ import Vue from "vue";
 import App from "./components/App.vue";
 import router from "./router";
 
+
+import moment from "moment";
+
+moment.locale('es');
+
+
 // import uibuilder from "./../../../node_modules/node-red-contrib-uibuilder/front-end/src/uibuilderfe.js";
 
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
+// import VueSmartWidget from 'vue-smart-widget'
+
+// Vue.use(VueSmartWidget)
+
+// import {SmartWidget} from 'vue-smart-widget'
+
+// Vue.component('SmartWidget', SmartWidget)
+
+// import { SmartWidgetGrid } from 'vue-smart-widget'
+
+// Vue.component('SmartWidgetGrid', SmartWidgetGrid)
 
 // Install BootstrapVue
 Vue.use(BootstrapVue);
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin);
+
+
+
 
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
@@ -27,10 +48,16 @@ Vue.use(VueApexCharts)
 Vue.component('apexchart', VueApexCharts)
 
 
-import ECharts from 'vue-echarts'
-import { use } from 'echarts/core'
+// import ECharts from 'vue-echarts'
+// import { use } from 'echarts/core'
 
-Vue.component('v-chart', ECharts)
+
+// Vue.component('v-chart', ECharts)
+
+
+import { Plotly } from 'vue-plotly'
+Vue.use(Plotly)
+Vue.component('Plotly', Plotly)
 
 window.uibuilder = uibuilder;
 uibuilder.start('/navbar', '/uibuilder/vendor/socket.io')

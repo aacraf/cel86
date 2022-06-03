@@ -51,7 +51,7 @@ RUN conda install -c intel scikit-learn
 RUN conda install -c intel tensorflow
 
 USER node-red
-RUN npm install node-red-contrib-machine-learning node-red-contrib-influxdb node-red-contrib-mssql-plus node-red-contrib-s7 node-red-contrib-uibuilder  
+RUN npm install node-red-contrib-machine-learning node-red-contrib-influxdb node-red-contrib-mssql-plus node-red-contrib-s7 node-red-contrib-uibuilder node-red-contrib-image-tools node-red-contrib-function-npm 
 
 
 

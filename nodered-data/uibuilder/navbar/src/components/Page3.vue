@@ -2,7 +2,8 @@
   <b-container fluid class="pr-5">
    <!-- <Grafica medname=0></Grafica>
    <Grafica medname=1></Grafica> -->
-   <Grafica medname=20></Grafica>
+   <Grafica SignalID="Temp_Horno"></Grafica>
+   <Medidor SignalID="Temp_Horno"></Medidor>
   </b-container>
 </template>
 
@@ -10,11 +11,14 @@
 
 import { defineComponent } from "@vue/composition-api";
 import Grafica from "./Grafica.vue";
+import Medidor from "./Medidor.vue";
+
 export default {
   name: "page2",
   components: {
     Grafica,
-  },
+    Medidor
+},
   data() {
     return {
       // msg: "No Message Received from Node-Red",
