@@ -6,4 +6,6 @@
 /nodered-data/uibuilder/vue-app/node_modules
 /nodered-data/flexdash-src
 /nodered-data/uibuilder/data 
-/nodered-data/models/scripts/core
+/nodered-data/models/scripts/core 
+/nodered-data/uibuilder/navbar/.parcel-cache
+/nodered-data/uibuilder/navbar/core
