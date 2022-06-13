@@ -1,28 +1,140 @@
-<template lang="html">
+<template>
   <b-container fluid class="pr-5">
-    <h2 class="ml-4 mt-4">Dashboard</h2>
-    <b-img src="../assets/forecasting.png" fluid alt="Responsive image"></b-img>
-    <!-- <vue-json-pretty :deep="0" :showLength="true" :showDoubleQuotes="false" :showSelectController="true" :deepCollapseChildren="true" :data="msg" > </vue-json-pretty> -->
+    <apexchart type="treemap" height="800" :options="chartOptions" :series="series"></apexchart>
   </b-container>
 </template>
 
 <script>
-export default {
-  name: "page1",
+import { defineComponent } from "@vue/composition-api";
+import moment from "moment";
+
+import 'moment/locale/es'  // without this line it didn't work
+moment.locale('es')
+export default defineComponent({
   data() {
     return {
-       msg: "No Message Received from Node-Red",
+      series: [
+        {
+          name: 'Lubrificador',
+          data: [
+            {
+              x: 'Flow_Cir_1',
+              y: 20
+            },
+            {
+              x: 'Flow_Cir_2',
+              y: 60
+            },
+            {
+              x: 'Flow_Cir_3',
+              y: 41
+            },
+            {
+              x: 'Flow_Cir_4',
+              y: 41
+            }
+          ]
+        },
+        {
+          name: 'Parametros inyeccion',
+          data: [
+            {
+              x: 'Caudal_Piston',
+              y: 20
+            },
+            {
+              x: 'Pres_Final_Mult',
+              y: 20
+            },
+            {
+              x: 'Pres_Maxima_Mult',
+              y: 51
+            },
+            {
+              x: 'Tiempo_Mult',
+              y: 30
+            },
+            {
+              x: 'Tiempo_Subida_RT',
+              y: 20
+            },
+            {
+              x: 'Vel_1a_Fase_Maxima',
+              y: 30
+            },
+            {
+              x: 'Vel_1a_Fase_Media',
+              y: 30
+            },
+            {
+              x: 'Vel_2a_Fase_Maxima',
+              y: 20
+            },
+            {
+              x: 'Vel_2a_Fase_Media',
+              y: 30
+            }
+          ]
+        },
+        {
+          name: 'Instalaciones',
+          data: [
+            {
+              x: 'Pres_Entrada_Agua_Maquina',
+              y: 30
+            },
+            {
+              x: 'Pres_Entrada_Aire',
+              y: 60
+            },
+            {
+              x: 'Pres_Retorno_Agua_Maquina',
+              y: 41
+            },
+            {
+              x: 'Pres_Retorno_Agua_Molde',
+              y: 41
+            }
+          ]
+        },
+        {
+          name: 'Temp Horno/Cuba/Pieza',
+          data: [
+            {
+              x: 'Temp_Cuba',
+              y: 30
+            },
+            {
+              x: 'Temp_Horno',
+              y: 30
+            }
+          ]
+        },
+      ],
+      chartOptions: {
+        legend: {
+          show: true
+        },
+        chart: {
+          height: 350,
+          type: 'treemap',
+          events: {
+            click: function (event, chartContext, config) {
+              console.log(config.config.series[config.seriesIndex].name)
+              console.log(config.config.series[config.seriesIndex].data[config.dataPointIndex].x)
+            }
+          }
+        },
+        title: {
+          text: 'Parámetros criticos CEL86',
+          align: 'center'
+        }
+      },
     }
   },
-  methods: {},
 
-  mounted() {
-    uibuilder.onChange("msg", (newMsg) => {
-      // console.info("Msg received from Node-RED server in Page1:", newMsg);
-      this.msg = newMsg
-    });
-  },
-};
+})
+
 </script>
 
 <style scoped>

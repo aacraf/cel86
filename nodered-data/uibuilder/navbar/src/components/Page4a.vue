@@ -1,26 +1,29 @@
-<!-- <template>
+<template>
   <b-container fluid class="pr-5">
-    <b-row class="h-75">
-      <b-col>
-            <smart-widget slot="2" title="Temperaturas" fullscreen collapse refresh>
-              <div class="layout-center">
-                <Grafica SignalID="Caudal_Piston"></Grafica>
-              </div>
-            </smart-widget>
-      </b-col>
-    </b-row>
-
+    <smart-widget-grid :layout="layout">
+      <smart-widget slot="0" simple>
+        <div class="layout-center">
+          <h3>Simple Widget</h3>
+        </div>
+      </smart-widget>
+      <smart-widget slot="1" title="Default Widget">
+        <div class="layout-center">
+          <h3>Widget with Header</h3>
+        </div>
+      </smart-widget>
+      <smart-widget slot="2" title="Full Screen" fullscreen>
+        <div class="layout-center">
+          <h3>Make any widget full screen a</h3>
+        </div>
+      </smart-widget>
+    </smart-widget-grid>
   </b-container>
 </template>
 
 <script>
 
-import Grafica from "./Grafica.vue";
-
 export default{
- components: {
-   Grafica
- },
+
  data () {
     return {
       layout: [
@@ -31,4 +34,4 @@ export default{
     }
   }
 }
-</script> -->
+</script>

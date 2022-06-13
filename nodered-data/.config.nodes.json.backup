@@ -783,6 +783,212 @@
             }
         }
     },
+    "@flexdash/node-red-fd-corewidgets": {
+        "name": "@flexdash/node-red-fd-corewidgets",
+        "version": "0.4.19",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "flexdash datetime": {
+                "name": "flexdash datetime",
+                "types": [
+                    "date-time"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-fd-corewidgets",
+                "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/datetime.js"
+            },
+            "flexdash gauge": {
+                "name": "flexdash gauge",
+                "types": [
+                    "gauge"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-fd-corewidgets",
+                "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/gauge.js"
+            },
+            "flexdash iframe": {
+                "name": "flexdash iframe",
+                "types": [
+                    "iframe"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-fd-corewidgets",
+                "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/iframe.js"
+            },
+            "flexdash label": {
+                "name": "flexdash label",
+                "types": [
+                    "label"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-fd-corewidgets",
+                "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/label.js"
+            },
+            "flexdash markdown": {
+                "name": "flexdash markdown",
+                "types": [
+                    "markdown"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-fd-corewidgets",
+                "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/markdown.js"
+            },
+            "flexdash popup-button": {
+                "name": "flexdash popup-button",
+                "types": [
+                    "popup-button"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-fd-corewidgets",
+                "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/popup-button.js"
+            },
+            "flexdash props-table": {
+                "name": "flexdash props-table",
+                "types": [
+                    "props-table"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-fd-corewidgets",
+                "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/props-table.js"
+            },
+            "flexdash push-button": {
+                "name": "flexdash push-button",
+                "types": [
+                    "push-button"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-fd-corewidgets",
+                "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/push-button.js"
+            },
+            "flexdash simple-table": {
+                "name": "flexdash simple-table",
+                "types": [
+                    "simple-table"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-fd-corewidgets",
+                "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/simple-table.js"
+            },
+            "flexdash spark-line": {
+                "name": "flexdash spark-line",
+                "types": [
+                    "spark-line"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-fd-corewidgets",
+                "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/spark-line.js"
+            },
+            "flexdash stat": {
+                "name": "flexdash stat",
+                "types": [
+                    "stat"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-fd-corewidgets",
+                "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/stat.js"
+            },
+            "flexdash text-view": {
+                "name": "flexdash text-view",
+                "types": [
+                    "text-view"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-fd-corewidgets",
+                "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/text-view.js"
+            },
+            "flexdash time-plot-raw": {
+                "name": "flexdash time-plot-raw",
+                "types": [
+                    "time-plot-raw"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-fd-corewidgets",
+                "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/time-plot-raw.js"
+            },
+            "flexdash time-plot": {
+                "name": "flexdash time-plot",
+                "types": [
+                    "time-plot"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-fd-corewidgets",
+                "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/time-plot.js"
+            },
+            "flexdash toggle": {
+                "name": "flexdash toggle",
+                "types": [
+                    "toggle"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-fd-corewidgets",
+                "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/toggle.js"
+            },
+            "flexdash tree-view": {
+                "name": "flexdash tree-view",
+                "types": [
+                    "tree-view"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-fd-corewidgets",
+                "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/tree-view.js"
+            },
+            "flexdash value-sequence": {
+                "name": "flexdash value-sequence",
+                "types": [
+                    "value-sequence"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-fd-corewidgets",
+                "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/value-sequence.js"
+            },
+            "flexdash wind-plot": {
+                "name": "flexdash wind-plot",
+                "types": [
+                    "wind-plot"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-fd-corewidgets",
+                "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/wind-plot.js"
+            }
+        }
+    },
     "@flexdash/node-red-flexdash": {
         "name": "@flexdash/node-red-flexdash",
         "version": "0.4.18",

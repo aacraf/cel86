@@ -14,6 +14,15 @@
             },
             "tours": {
                 "welcome": "2.2.2"
+            },
+            "sidebar": {
+                "order": [
+                    "info",
+                    "debug",
+                    "help",
+                    "config",
+                    "context"
+                ]
             }
         },
         "menu-menu-item-sidebar": true,

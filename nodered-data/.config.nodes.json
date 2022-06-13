@@ -783,58 +783,6 @@
             }
         }
     },
-    "@flexdash/node-red-flexdash": {
-        "name": "@flexdash/node-red-flexdash",
-        "version": "0.4.18",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "flexdash dashboard": {
-                "name": "flexdash dashboard",
-                "types": [
-                    "flexdash dashboard"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "@flexdash/node-red-flexdash",
-                "file": "/data/node_modules/@flexdash/node-red-flexdash/flexdash-dashboard.js"
-            },
-            "flexdash container": {
-                "name": "flexdash container",
-                "types": [
-                    "flexdash container"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "@flexdash/node-red-flexdash",
-                "file": "/data/node_modules/@flexdash/node-red-flexdash/flexdash-container.js"
-            },
-            "flexdash tab": {
-                "name": "flexdash tab",
-                "types": [
-                    "flexdash tab"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "@flexdash/node-red-flexdash",
-                "file": "/data/node_modules/@flexdash/node-red-flexdash/flexdash-tab.js"
-            },
-            "flexdash dev server": {
-                "name": "flexdash dev server",
-                "types": [
-                    "flexdash dev server"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "@flexdash/node-red-flexdash",
-                "file": "/data/node_modules/@flexdash/node-red-flexdash/flexdash-dev-server.js"
-            }
-        }
-    },
     "@flexdash/node-red-fd-corewidgets": {
         "name": "@flexdash/node-red-fd-corewidgets",
         "version": "0.4.19",
@@ -1038,6 +986,88 @@
                 "user": false,
                 "module": "@flexdash/node-red-fd-corewidgets",
                 "file": "/data/node_modules/@flexdash/node-red-fd-corewidgets/wind-plot.js"
+            }
+        }
+    },
+    "@flexdash/node-red-flexdash": {
+        "name": "@flexdash/node-red-flexdash",
+        "version": "0.4.18",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "flexdash dashboard": {
+                "name": "flexdash dashboard",
+                "types": [
+                    "flexdash dashboard"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-flexdash",
+                "file": "/data/node_modules/@flexdash/node-red-flexdash/flexdash-dashboard.js"
+            },
+            "flexdash container": {
+                "name": "flexdash container",
+                "types": [
+                    "flexdash container"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-flexdash",
+                "file": "/data/node_modules/@flexdash/node-red-flexdash/flexdash-container.js"
+            },
+            "flexdash tab": {
+                "name": "flexdash tab",
+                "types": [
+                    "flexdash tab"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-flexdash",
+                "file": "/data/node_modules/@flexdash/node-red-flexdash/flexdash-tab.js"
+            },
+            "flexdash dev server": {
+                "name": "flexdash dev server",
+                "types": [
+                    "flexdash dev server"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "@flexdash/node-red-flexdash",
+                "file": "/data/node_modules/@flexdash/node-red-flexdash/flexdash-dev-server.js"
+            }
+        }
+    },
+    "node-red-contrib-moment": {
+        "name": "node-red-contrib-moment",
+        "version": "4.0.0",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "moment": {
+                "name": "moment",
+                "types": [
+                    "moment"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-moment",
+                "file": "/data/node_modules/node-red-contrib-moment/moment/nrmoment.js"
+            },
+            "humanizer": {
+                "name": "humanizer",
+                "types": [
+                    "humanizer"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-moment",
+                "file": "/data/node_modules/node-red-contrib-moment/moment/nrhumanizer.js"
             }
         }
     }

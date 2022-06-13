@@ -13,17 +13,17 @@ moment.locale('es');
 
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
-// import VueSmartWidget from 'vue-smart-widget'
+import VueSmartWidget from 'vue-smart-widget'
 
-// Vue.use(VueSmartWidget)
+Vue.use(VueSmartWidget)
 
-// import {SmartWidget} from 'vue-smart-widget'
+import {SmartWidget} from 'vue-smart-widget'
 
-// Vue.component('SmartWidget', SmartWidget)
+Vue.component('SmartWidget', SmartWidget)
 
-// import { SmartWidgetGrid } from 'vue-smart-widget'
+import { SmartWidgetGrid } from 'vue-smart-widget'
 
-// Vue.component('SmartWidgetGrid', SmartWidgetGrid)
+Vue.component('SmartWidgetGrid', SmartWidgetGrid)
 
 // Install BootstrapVue
 Vue.use(BootstrapVue);
@@ -37,9 +37,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 
 // Optionally install the vue-json-pretty components
-import VueJsonPretty from 'vue-json-pretty';
-import 'vue-json-pretty/lib/styles.css';
-Vue.component('VueJsonPretty', VueJsonPretty);
+// import VueJsonPretty from 'vue-json-pretty';
+// import 'vue-json-pretty/lib/styles.css';
+// Vue.component('VueJsonPretty', VueJsonPretty);
 
 
 import VueApexCharts from 'vue-apexcharts'
@@ -47,17 +47,19 @@ Vue.use(VueApexCharts)
 
 Vue.component('apexchart', VueApexCharts)
 
+import VueSvgGauge from 'vue-svg-gauge'
+Vue.use(VueSvgGauge)
 
-// import ECharts from 'vue-echarts'
-// import { use } from 'echarts/core'
-
-
-// Vue.component('v-chart', ECharts)
 
 
 import { Plotly } from 'vue-plotly'
 Vue.use(Plotly)
 Vue.component('Plotly', Plotly)
+
+
+import VCharts from 'v-charts'
+Vue.use(VCharts)
+
 
 window.uibuilder = uibuilder;
 uibuilder.start('/navbar', '/uibuilder/vendor/socket.io')

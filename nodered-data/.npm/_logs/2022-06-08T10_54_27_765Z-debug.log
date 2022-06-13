@@ -1,0 +1,1503 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'uninstall',
+1 verbose cli   '--save',
+1 verbose cli   '--color=false',
+1 verbose cli   '--no-fund',
+1 verbose cli   '--no-audit',
+1 verbose cli   '--no-update-notifier',
+1 verbose cli   'vue-echarts'
+1 verbose cli ]
+2 info using npm@6.14.16
+3 info using node@v14.19.1
+4 verbose npm-session 6c15072773f90c8e
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 timing stage:loadCurrentTree Completed in 1556ms
+8 silly install loadIdealTree
+9 silly install cloneCurrentTreeToIdealTree
+10 timing stage:loadIdealTree:cloneCurrentTree Completed in 7ms
+11 silly install loadShrinkwrap
+12 timing stage:loadIdealTree:loadShrinkwrap Completed in 502ms
+13 silly uninstall loadAllDepsIntoIdealTree
+14 silly install loadAllDepsIntoIdealTree
+15 http fetch GET 200 https://registry.npmjs.org/echarts 334ms
+16 http fetch GET 200 https://registry.npmjs.org/echarts/-/echarts-5.3.2.tgz 489ms (from cache)
+17 silly pacote range manifest for echarts@^5.3.2 fetched in 849ms
+18 http fetch GET 200 https://registry.npmjs.org/tslib 72ms
+19 silly pacote version manifest for tslib@2.3.0 fetched in 77ms
+20 http fetch GET 200 https://registry.npmjs.org/zrender 280ms
+21 silly pacote version manifest for zrender@5.3.1 fetched in 283ms
+22 silly pacote range manifest for echarts@^5.3.2 fetched in 8ms
+23 silly resolveWithNewModule echarts@5.3.2 checking installable status
+24 silly pacote version manifest for tslib@2.3.0 fetched in 2ms
+25 silly resolveWithNewModule tslib@2.3.0 checking installable status
+26 silly pacote version manifest for zrender@5.3.1 fetched in 2ms
+27 silly resolveWithNewModule zrender@5.3.1 checking installable status
+28 timing stage:loadIdealTree:loadAllDepsIntoIdealTree Completed in 1649ms
+29 timing stage:loadIdealTree Completed in 2312ms
+30 silly currentTree uib_root@5.0.2
+30 silly currentTree +-- @choojs/findup@0.2.1
+30 silly currentTree +-- @interactjs/actions@1.10.11
+30 silly currentTree +-- @interactjs/auto-scroll@1.10.11
+30 silly currentTree +-- @interactjs/auto-start@1.10.11
+30 silly currentTree +-- @interactjs/core@1.10.11
+30 silly currentTree +-- @interactjs/dev-tools@1.10.11
+30 silly currentTree +-- @interactjs/inertia@1.10.11
+30 silly currentTree +-- @interactjs/interact@1.10.11
+30 silly currentTree +-- @interactjs/interactjs@1.10.11
+30 silly currentTree +-- @interactjs/modifiers@1.10.11
+30 silly currentTree +-- @interactjs/offset@1.10.11
+30 silly currentTree +-- @interactjs/pointer-events@1.10.11
+30 silly currentTree +-- @interactjs/reflow@1.10.11
+30 silly currentTree +-- @interactjs/snappers@1.10.11
+30 silly currentTree +-- @interactjs/types@1.10.11
+30 silly currentTree +-- @interactjs/utils@1.10.11
+30 silly currentTree +-- @mapbox/geojson-rewind@0.5.2
+30 silly currentTree +-- @mapbox/geojson-types@1.0.2
+30 silly currentTree +-- @mapbox/jsonlint-lines-primitives@2.0.2
+30 silly currentTree +-- @mapbox/mapbox-gl-supported@1.5.0
+30 silly currentTree +-- @mapbox/point-geometry@0.1.0
+30 silly currentTree +-- @mapbox/tiny-sdf@1.2.5
+30 silly currentTree +-- @mapbox/unitbezier@0.0.0
+30 silly currentTree +-- @mapbox/vector-tile@1.3.1
+30 silly currentTree +-- @mapbox/whoots-js@3.1.0
+30 silly currentTree +-- @nuxt/opencollective@0.3.2
+30 silly currentTree +-- @plotly/d3-sankey-circular@0.33.1
+30 silly currentTree +-- @plotly/d3-sankey@0.7.2
+30 silly currentTree +-- @plotly/point-cluster@3.1.9
+30 silly currentTree +-- @turf/area@6.5.0
+30 silly currentTree +-- @turf/bbox@6.5.0
+30 silly currentTree +-- @turf/centroid@6.5.0
+30 silly currentTree +-- @turf/helpers@6.5.0
+30 silly currentTree +-- @turf/meta@6.5.0
+30 silly currentTree +-- @tweenjs/tween.js@17.6.0
+30 silly currentTree +-- @vue/composition-api@1.4.9
+30 silly currentTree +-- 3d-view@2.0.1
+30 silly currentTree +-- a-big-triangle@1.0.3
+30 silly currentTree +-- abs-svg-path@0.1.1
+30 silly currentTree +-- acorn@7.4.1
+30 silly currentTree +-- add-line-numbers@1.0.1
+30 silly currentTree +-- affine-hull@1.0.0
+30 silly currentTree +-- almost-equal@1.1.0
+30 silly currentTree +-- alpha-complex@1.0.0
+30 silly currentTree +-- alpha-shape@1.0.0
+30 silly currentTree +-- ansi-styles@4.3.0
+30 silly currentTree +-- arr-flatten@1.1.0
+30 silly currentTree +-- array-bounds@1.0.1
+30 silly currentTree +-- array-find-index@1.0.2
+30 silly currentTree +-- array-normalize@1.1.4
+30 silly currentTree +-- array-range@1.0.1
+30 silly currentTree +-- array-rearrange@2.2.2
+30 silly currentTree +-- atob-lite@1.0.0
+30 silly currentTree +-- barycentric@1.0.1
+30 silly currentTree +-- batch-processor@1.0.0
+30 silly currentTree +-- big-rat@1.0.4
+30 silly currentTree +-- binary-search-bounds@2.0.5
+30 silly currentTree +-- bit-twiddle@1.0.2
+30 silly currentTree +-- bitmap-sdf@1.0.4
+30 silly currentTree +-- bl@2.2.1
+30 silly currentTree | +-- isarray@1.0.0
+30 silly currentTree | +-- readable-stream@2.3.7
+30 silly currentTree | | `-- safe-buffer@5.1.2
+30 silly currentTree | `-- string_decoder@1.1.1
+30 silly currentTree |   `-- safe-buffer@5.1.2
+30 silly currentTree +-- bn.js@4.12.0
+30 silly currentTree +-- bootstrap-vue@2.22.0
+30 silly currentTree +-- bootstrap@4.6.1
+30 silly currentTree +-- boundary-cells@2.0.2
+30 silly currentTree +-- box-intersect@1.0.2
+30 silly currentTree +-- buffer-from@1.1.2
+30 silly currentTree +-- canvas-fit@1.5.0
+30 silly currentTree +-- cdt2d@1.0.0
+30 silly currentTree +-- cell-orientation@1.0.1
+30 silly currentTree +-- chalk@4.1.2
+30 silly currentTree +-- circumcenter@1.0.0
+30 silly currentTree +-- circumradius@1.0.0
+30 silly currentTree +-- clamp@1.0.1
+30 silly currentTree +-- clean-pslg@1.1.2
+30 silly currentTree +-- color-alpha@1.0.4
+30 silly currentTree +-- color-convert@2.0.1
+30 silly currentTree +-- color-id@1.1.0
+30 silly currentTree +-- color-name@1.1.4
+30 silly currentTree +-- color-normalize@1.5.0
+30 silly currentTree +-- color-parse@1.3.8
+30 silly currentTree +-- color-rgba@2.1.1
+30 silly currentTree +-- color-space@1.16.0
+30 silly currentTree +-- colormap@2.3.2
+30 silly currentTree +-- commander@2.20.3
+30 silly currentTree +-- compare-angle@1.0.1
+30 silly currentTree +-- compare-cell@1.0.0
+30 silly currentTree +-- compare-oriented-cell@1.0.1
+30 silly currentTree +-- compute-dims@1.1.0
+30 silly currentTree +-- concat-stream@1.6.2
+30 silly currentTree | +-- isarray@1.0.0
+30 silly currentTree | +-- readable-stream@2.3.7
+30 silly currentTree | +-- safe-buffer@5.1.2
+30 silly currentTree | `-- string_decoder@1.1.1
+30 silly currentTree +-- consola@2.15.3
+30 silly currentTree +-- const-max-uint32@1.0.2
+30 silly currentTree +-- const-pinf-float64@1.0.0
+30 silly currentTree +-- convex-hull@1.0.3
+30 silly currentTree +-- core-js@3.22.7
+30 silly currentTree +-- core-util-is@1.0.3
+30 silly currentTree +-- country-regex@1.1.0
+30 silly currentTree +-- css-element-queries@1.2.3
+30 silly currentTree +-- css-font-size-keywords@1.0.0
+30 silly currentTree +-- css-font-stretch-keywords@1.0.1
+30 silly currentTree +-- css-font-style-keywords@1.0.1
+30 silly currentTree +-- css-font-weight-keywords@1.0.0
+30 silly currentTree +-- css-font@1.2.0
+30 silly currentTree +-- css-global-keywords@1.0.1
+30 silly currentTree +-- css-system-font-keywords@1.0.0
+30 silly currentTree +-- csscolorparser@1.0.3
+30 silly currentTree +-- cubic-hermite@1.0.0
+30 silly currentTree +-- cwise-compiler@1.1.3
+30 silly currentTree +-- d@1.0.1
+30 silly currentTree +-- d3-array@1.2.4
+30 silly currentTree +-- d3-collection@1.0.7
+30 silly currentTree +-- d3-color@1.4.1
+30 silly currentTree +-- d3-dispatch@1.0.6
+30 silly currentTree +-- d3-force@1.2.1
+30 silly currentTree +-- d3-hierarchy@1.1.9
+30 silly currentTree +-- d3-interpolate@1.4.0
+30 silly currentTree +-- d3-path@1.0.9
+30 silly currentTree +-- d3-quadtree@1.0.7
+30 silly currentTree +-- d3-shape@1.3.7
+30 silly currentTree +-- d3-time-format@2.3.0
+30 silly currentTree +-- d3-time@1.1.0
+30 silly currentTree +-- d3-timer@1.0.10
+30 silly currentTree +-- d3@3.5.17
+30 silly currentTree +-- deep-is@0.1.4
+30 silly currentTree +-- defined@1.0.0
+30 silly currentTree +-- delaunay-triangulate@1.1.6
+30 silly currentTree +-- detect-kerning@2.1.2
+30 silly currentTree +-- double-bits@1.1.1
+30 silly currentTree +-- draw-svg-path@1.0.0
+30 silly currentTree +-- dtype@2.0.0
+30 silly currentTree +-- dup@1.0.0
+30 silly currentTree +-- duplexify@3.7.1
+30 silly currentTree | +-- isarray@1.0.0
+30 silly currentTree | +-- readable-stream@2.3.7
+30 silly currentTree | +-- safe-buffer@5.1.2
+30 silly currentTree | `-- string_decoder@1.1.1
+30 silly currentTree +-- earcut@2.2.3
+30 silly currentTree +-- echarts
+30 silly currentTree +-- edges-to-adjacency-list@1.0.0
+30 silly currentTree +-- element-resize-detector@1.2.4
+30 silly currentTree +-- element-size@1.1.1
+30 silly currentTree +-- elementary-circuits-directed-graph@1.3.1
+30 silly currentTree +-- end-of-stream@1.4.4
+30 silly currentTree +-- es5-ext@0.10.61
+30 silly currentTree +-- es6-iterator@2.0.3
+30 silly currentTree +-- es6-promise@4.2.8
+30 silly currentTree +-- es6-symbol@3.1.3
+30 silly currentTree +-- es6-weak-map@2.0.3
+30 silly currentTree +-- escodegen@1.14.3
+30 silly currentTree +-- esprima@4.0.1
+30 silly currentTree +-- estraverse@4.3.0
+30 silly currentTree +-- esutils@2.0.3
+30 silly currentTree +-- events@3.3.0
+30 silly currentTree +-- ext@1.6.0
+30 silly currentTree | `-- type@2.6.0
+30 silly currentTree +-- extract-frustum-planes@1.0.0
+30 silly currentTree +-- falafel@2.2.5
+30 silly currentTree | `-- isarray@2.0.5
+30 silly currentTree +-- fast-isnumeric@1.1.4
+30 silly currentTree +-- fast-levenshtein@2.0.6
+30 silly currentTree +-- filtered-vector@1.2.5
+30 silly currentTree +-- flatten-vertex-data@1.0.2
+30 silly currentTree +-- flip-pixels@1.0.2
+30 silly currentTree +-- font-atlas@2.1.0
+30 silly currentTree +-- font-measure@1.2.2
+30 silly currentTree +-- from2@2.3.0
+30 silly currentTree | +-- isarray@1.0.0
+30 silly currentTree | +-- readable-stream@2.3.7
+30 silly currentTree | +-- safe-buffer@5.1.2
+30 silly currentTree | `-- string_decoder@1.1.1
+30 silly currentTree +-- function-bind@1.1.1
+30 silly currentTree +-- functional-red-black-tree@1.0.1
+30 silly currentTree +-- gamma@0.1.0
+30 silly currentTree +-- geojson-vt@3.2.1
+30 silly currentTree +-- get-canvas-context@1.0.2
+30 silly currentTree +-- get-stream@6.0.1
+30 silly currentTree +-- gl-axes3d@1.5.3
+30 silly currentTree +-- gl-buffer@2.1.2
+30 silly currentTree +-- gl-cone3d@1.5.2
+30 silly currentTree +-- gl-constants@1.0.0
+30 silly currentTree +-- gl-contour2d@1.1.7
+30 silly currentTree +-- gl-error3d@1.0.16
+30 silly currentTree +-- gl-fbo@2.0.5
+30 silly currentTree +-- gl-format-compiler-error@1.0.3
+30 silly currentTree +-- gl-heatmap2d@1.1.1
+30 silly currentTree +-- gl-line3d@1.2.1
+30 silly currentTree +-- gl-mat3@1.0.0
+30 silly currentTree +-- gl-mat4@1.2.0
+30 silly currentTree +-- gl-matrix@3.4.3
+30 silly currentTree +-- gl-mesh3d@2.3.1
+30 silly currentTree +-- gl-plot2d@1.4.5
+30 silly currentTree +-- gl-plot3d@2.4.7
+30 silly currentTree +-- gl-pointcloud2d@1.0.3
+30 silly currentTree +-- gl-quat@1.0.0
+30 silly currentTree +-- gl-scatter3d@1.2.3
+30 silly currentTree +-- gl-select-box@1.0.4
+30 silly currentTree +-- gl-select-static@2.0.7
+30 silly currentTree +-- gl-shader@4.3.1
+30 silly currentTree +-- gl-spikes2d@1.0.2
+30 silly currentTree +-- gl-spikes3d@1.0.10
+30 silly currentTree +-- gl-state@1.0.0
+30 silly currentTree +-- gl-streamtube3d@1.4.1
+30 silly currentTree +-- gl-surface3d@1.6.0
+30 silly currentTree +-- gl-text@1.3.1
+30 silly currentTree | `-- regl@2.1.0
+30 silly currentTree +-- gl-texture2d@2.1.0
+30 silly currentTree +-- gl-util@3.1.3
+30 silly currentTree +-- gl-vao@1.3.0
+30 silly currentTree +-- gl-vec3@1.1.3
+30 silly currentTree +-- gl-vec4@1.0.1
+30 silly currentTree +-- glsl-inject-defines@1.0.3
+30 silly currentTree +-- glsl-inverse@1.0.0
+30 silly currentTree +-- glsl-out-of-range@1.0.4
+30 silly currentTree +-- glsl-resolve@0.0.1
+30 silly currentTree | +-- resolve@0.6.3
+30 silly currentTree | `-- xtend@2.2.0
+30 silly currentTree +-- glsl-shader-name@1.0.0
+30 silly currentTree +-- glsl-specular-beckmann@1.1.2
+30 silly currentTree +-- glsl-specular-cook-torrance@2.0.1
+30 silly currentTree +-- glsl-token-assignments@2.0.2
+30 silly currentTree +-- glsl-token-defines@1.0.0
+30 silly currentTree +-- glsl-token-depth@1.1.2
+30 silly currentTree +-- glsl-token-descope@1.0.2
+30 silly currentTree +-- glsl-token-inject-block@1.1.0
+30 silly currentTree +-- glsl-token-properties@1.0.1
+30 silly currentTree +-- glsl-token-scope@1.1.2
+30 silly currentTree +-- glsl-token-string@1.0.1
+30 silly currentTree +-- glsl-token-whitespace-trim@1.0.0
+30 silly currentTree +-- glsl-tokenizer@2.1.5
+30 silly currentTree +-- glslify-bundle@5.1.1
+30 silly currentTree +-- glslify-deps@1.3.2
+30 silly currentTree +-- glslify@7.1.1
+30 silly currentTree | +-- isarray@1.0.0
+30 silly currentTree | +-- readable-stream@2.3.7
+30 silly currentTree | +-- safe-buffer@5.1.2
+30 silly currentTree | +-- string_decoder@1.1.1
+30 silly currentTree | `-- through2@2.0.5
+30 silly currentTree +-- graceful-fs@4.2.10
+30 silly currentTree +-- grid-index@1.1.0
+30 silly currentTree +-- has-flag@4.0.0
+30 silly currentTree +-- has-hover@1.0.1
+30 silly currentTree +-- has-passive-events@1.0.0
+30 silly currentTree +-- has@1.0.3
+30 silly currentTree +-- hsluv@0.0.3
+30 silly currentTree +-- http-vue-loader@1.4.2
+30 silly currentTree +-- ieee754@1.2.1
+30 silly currentTree +-- image-palette@2.1.0
+30 silly currentTree +-- image-size@0.7.5
+30 silly currentTree +-- incremental-convex-hull@1.0.1
+30 silly currentTree +-- inherits@2.0.4
+30 silly currentTree +-- intersection-observer@0.5.1
+30 silly currentTree +-- interval-tree-1d@1.0.4
+30 silly currentTree +-- invert-permutation@1.0.0
+30 silly currentTree +-- iota-array@1.0.0
+30 silly currentTree +-- is-base64@0.1.0
+30 silly currentTree +-- is-blob@2.1.0
+30 silly currentTree +-- is-browser@2.1.0
+30 silly currentTree +-- is-buffer@1.1.6
+30 silly currentTree +-- is-core-module@2.9.0
+30 silly currentTree +-- is-finite@1.1.0
+30 silly currentTree +-- is-firefox@1.0.3
+30 silly currentTree +-- is-float-array@1.0.0
+30 silly currentTree +-- is-iexplorer@1.0.0
+30 silly currentTree +-- is-mobile@2.2.2
+30 silly currentTree +-- is-obj@1.0.1
+30 silly currentTree +-- is-plain-obj@1.1.0
+30 silly currentTree +-- is-string-blank@1.0.1
+30 silly currentTree +-- is-svg-path@1.0.2
+30 silly currentTree +-- isarray@0.0.1
+30 silly currentTree +-- kdbush@3.0.0
+30 silly currentTree +-- lerp@1.0.3
+30 silly currentTree +-- levn@0.3.0
+30 silly currentTree +-- lodash.debounce@4.0.8
+30 silly currentTree +-- map-limit@0.0.1
+30 silly currentTree | `-- once@1.3.3
+30 silly currentTree +-- mapbox-gl@1.10.1
+30 silly currentTree +-- marching-simplex-table@1.0.0
+30 silly currentTree +-- mat4-decompose@1.0.4
+30 silly currentTree +-- mat4-interpolate@1.0.4
+30 silly currentTree +-- mat4-recompose@1.0.4
+30 silly currentTree +-- math-log2@1.0.1
+30 silly currentTree +-- matrix-camera-controller@2.1.4
+30 silly currentTree +-- minimist@1.2.6
+30 silly currentTree +-- moment@2.29.3
+30 silly currentTree +-- monotone-convex-hull-2d@1.0.1
+30 silly currentTree +-- mouse-change@1.4.0
+30 silly currentTree +-- mouse-event-offset@3.0.2
+30 silly currentTree +-- mouse-event@1.0.5
+30 silly currentTree +-- mouse-wheel@1.2.0
+30 silly currentTree | `-- signum@1.0.0
+30 silly currentTree +-- mumath@3.3.4
+30 silly currentTree +-- murmurhash-js@1.0.0
+30 silly currentTree +-- ndarray-extract-contour@1.0.1
+30 silly currentTree +-- ndarray-gradient@1.0.1
+30 silly currentTree +-- ndarray-linear-interpolate@1.0.0
+30 silly currentTree +-- ndarray-ops@1.2.2
+30 silly currentTree +-- ndarray-pack@1.2.1
+30 silly currentTree +-- ndarray-scratch@1.2.0
+30 silly currentTree +-- ndarray-sort@1.0.1
+30 silly currentTree +-- ndarray@1.0.19
+30 silly currentTree +-- next-tick@1.1.0
+30 silly currentTree +-- nextafter@1.0.0
+30 silly currentTree +-- node-fetch@2.6.7
+30 silly currentTree +-- normalize-svg-path@0.1.0
+30 silly currentTree +-- normals@1.1.0
+30 silly currentTree +-- number-is-integer@1.0.1
+30 silly currentTree +-- numeric@1.2.6
+30 silly currentTree +-- object-assign@4.1.1
+30 silly currentTree +-- object-keys@1.1.1
+30 silly currentTree +-- once@1.4.0
+30 silly currentTree +-- optionator@0.8.3
+30 silly currentTree +-- orbit-camera-controller@4.0.0
+30 silly currentTree +-- pad-left@1.0.2
+30 silly currentTree +-- parenthesis@3.1.8
+30 silly currentTree +-- parse-rect@1.2.0
+30 silly currentTree +-- parse-svg-path@0.1.2
+30 silly currentTree +-- parse-unit@1.0.1
+30 silly currentTree +-- path-parse@1.0.7
+30 silly currentTree +-- pbf@3.2.1
+30 silly currentTree +-- performance-now@2.1.0
+30 silly currentTree +-- permutation-parity@1.0.0
+30 silly currentTree +-- permutation-rank@1.0.0
+30 silly currentTree +-- pick-by-alias@1.2.0
+30 silly currentTree +-- planar-dual@1.0.2
+30 silly currentTree +-- planar-graph-to-polyline@1.0.6
+30 silly currentTree +-- plotly.js@1.58.5
+30 silly currentTree +-- point-in-big-polygon@2.0.1
+30 silly currentTree +-- polybooljs@1.2.0
+30 silly currentTree +-- polytope-closest-point@1.0.0
+30 silly currentTree +-- popper.js@1.16.1
+30 silly currentTree +-- portal-vue@2.1.7
+30 silly currentTree +-- potpack@1.0.2
+30 silly currentTree +-- prelude-ls@1.1.2
+30 silly currentTree +-- process-nextick-args@2.0.1
+30 silly currentTree +-- protocol-buffers-schema@3.6.0
+30 silly currentTree +-- pxls@2.3.2
+30 silly currentTree | `-- is-buffer@2.0.5
+30 silly currentTree +-- quantize@1.0.2
+30 silly currentTree +-- quat-slerp@1.0.1
+30 silly currentTree +-- quickselect@2.0.0
+30 silly currentTree +-- raf@3.4.1
+30 silly currentTree +-- rat-vec@1.1.1
+30 silly currentTree +-- readable-stream@1.0.34
+30 silly currentTree +-- reduce-simplicial-complex@1.0.0
+30 silly currentTree +-- regex-regex@1.0.0
+30 silly currentTree +-- regl-error2d@2.0.12
+30 silly currentTree +-- regl-line2d@3.1.2
+30 silly currentTree +-- regl-scatter2d@3.2.8
+30 silly currentTree +-- regl-splom@1.0.14
+30 silly currentTree +-- regl@1.7.0
+30 silly currentTree +-- repeat-string@1.6.1
+30 silly currentTree +-- resize-detector@0.3.0
+30 silly currentTree +-- resolve-protobuf-schema@2.1.0
+30 silly currentTree +-- resolve@1.22.0
+30 silly currentTree +-- right-now@1.0.0
+30 silly currentTree +-- robust-compress@1.0.0
+30 silly currentTree +-- robust-determinant@1.1.0
+30 silly currentTree +-- robust-dot-product@1.0.0
+30 silly currentTree +-- robust-in-sphere@1.2.1
+30 silly currentTree +-- robust-linear-solve@1.0.0
+30 silly currentTree +-- robust-orientation@1.2.1
+30 silly currentTree +-- robust-product@1.0.0
+30 silly currentTree +-- robust-scale@1.0.2
+30 silly currentTree +-- robust-segment-intersect@1.0.1
+30 silly currentTree +-- robust-subtract@1.0.0
+30 silly currentTree +-- robust-sum@1.0.0
+30 silly currentTree +-- rw@1.3.3
+30 silly currentTree +-- safe-buffer@5.2.1
+30 silly currentTree +-- sane-topojson@4.0.0
+30 silly currentTree +-- shallow-copy@0.0.1
+30 silly currentTree +-- signum@0.0.0
+30 silly currentTree +-- simplicial-complex-boundary@1.0.1
+30 silly currentTree +-- simplicial-complex-contour@1.0.2
+30 silly currentTree +-- simplicial-complex@1.0.0
+30 silly currentTree +-- simplify-planar-graph@2.0.1
+30 silly currentTree | +-- bit-twiddle@0.0.2
+30 silly currentTree | +-- simplicial-complex@0.3.3
+30 silly currentTree | `-- union-find@0.0.4
+30 silly currentTree +-- slab-decomposition@1.0.3
+30 silly currentTree +-- source-map@0.6.1
+30 silly currentTree +-- split-polygon@1.0.0
+30 silly currentTree +-- sprintf-js@1.1.2
+30 silly currentTree +-- stack-trace@0.0.9
+30 silly currentTree +-- static-eval@2.1.0
+30 silly currentTree +-- stream-shift@1.0.1
+30 silly currentTree +-- string_decoder@0.10.31
+30 silly currentTree +-- string-split-by@1.0.0
+30 silly currentTree +-- string-to-arraybuffer@1.0.2
+30 silly currentTree | `-- atob-lite@2.0.0
+30 silly currentTree +-- strongly-connected-components@1.0.1
+30 silly currentTree +-- supercluster@7.1.5
+30 silly currentTree +-- superscript-text@1.0.0
+30 silly currentTree +-- supports-color@7.2.0
+30 silly currentTree +-- supports-preserve-symlinks-flag@1.0.0
+30 silly currentTree +-- surface-nets@1.0.2
+30 silly currentTree +-- svg-arc-to-cubic-bezier@3.2.0
+30 silly currentTree +-- svg-path-bounds@1.0.2
+30 silly currentTree | `-- normalize-svg-path@1.1.0
+30 silly currentTree +-- svg-path-sdf@1.1.3
+30 silly currentTree +-- text-cache@4.2.2
+30 silly currentTree +-- through2@0.6.5
+30 silly currentTree +-- tinycolor2@1.4.2
+30 silly currentTree +-- tinyqueue@2.0.3
+30 silly currentTree +-- to-array-buffer@3.2.0
+30 silly currentTree +-- to-float32@1.1.0
+30 silly currentTree +-- to-px@1.0.1
+30 silly currentTree +-- to-uint8@1.4.1
+30 silly currentTree +-- topojson-client@3.1.0
+30 silly currentTree +-- tr46@0.0.3
+30 silly currentTree +-- triangulate-hypercube@1.0.1
+30 silly currentTree +-- triangulate-polyline@1.0.3
+30 silly currentTree +-- turntable-camera-controller@3.0.1
+30 silly currentTree +-- two-product@1.0.2
+30 silly currentTree +-- two-sum@1.0.0
+30 silly currentTree +-- type-check@0.3.2
+30 silly currentTree +-- type-name@2.0.2
+30 silly currentTree +-- type@1.2.0
+30 silly currentTree +-- typedarray-pool@1.2.0
+30 silly currentTree +-- typedarray@0.0.6
+30 silly currentTree +-- union-find@1.0.2
+30 silly currentTree +-- uniq@1.0.1
+30 silly currentTree +-- unquote@1.1.1
+30 silly currentTree +-- update-diff@1.1.0
+30 silly currentTree +-- util-deprecate@1.0.2
+30 silly currentTree +-- utils-copy-error@1.0.1
+30 silly currentTree +-- utils-copy@1.1.1
+30 silly currentTree +-- utils-indexof@1.0.0
+30 silly currentTree +-- utils-regex-from-string@1.0.0
+30 silly currentTree +-- validate.io-array-like@1.0.2
+30 silly currentTree +-- validate.io-array@1.0.6
+30 silly currentTree +-- validate.io-buffer@1.0.2
+30 silly currentTree +-- validate.io-integer-primitive@1.0.0
+30 silly currentTree +-- validate.io-integer@1.0.5
+30 silly currentTree +-- validate.io-matrix-like@1.0.2
+30 silly currentTree +-- validate.io-ndarray-like@1.0.0
+30 silly currentTree +-- validate.io-nonnegative-integer@1.0.0
+30 silly currentTree +-- validate.io-number-primitive@1.0.0
+30 silly currentTree +-- validate.io-number@1.0.3
+30 silly currentTree +-- validate.io-positive-integer@1.0.0
+30 silly currentTree +-- validate.io-string-primitive@1.0.1
+30 silly currentTree +-- vectorize-text@3.2.2
+30 silly currentTree +-- vt-pbf@3.1.3
+30 silly currentTree +-- vue-demi@0.12.5
+30 silly currentTree +-- vue-echarts@6.0.3
+30 silly currentTree +-- vue-functional-data-merge@3.1.0
+30 silly currentTree +-- vue-grid-layout@2.3.12
+30 silly currentTree +-- vue-plotly@1.1.0
+30 silly currentTree +-- vue-resize-directive@1.2.0
+30 silly currentTree +-- vue-smart-widget@0.6.1
+30 silly currentTree +-- vue-svg-gauge@1.2.1
+30 silly currentTree +-- vue@2.6.12
+30 silly currentTree +-- weak-map@1.0.8
+30 silly currentTree +-- weakmap-shim@1.1.1
+30 silly currentTree +-- webgl-context@2.2.0
+30 silly currentTree +-- webidl-conversions@3.0.1
+30 silly currentTree +-- whatwg-url@5.0.0
+30 silly currentTree +-- word-wrap@1.2.3
+30 silly currentTree +-- world-calendars@1.0.3
+30 silly currentTree +-- wrappy@1.0.2
+30 silly currentTree +-- xtend@4.0.2
+30 silly currentTree `-- zero-crossings@1.0.1
+31 silly idealTree uib_root@5.0.2
+31 silly idealTree +-- @choojs/findup@0.2.1
+31 silly idealTree +-- @interactjs/actions@1.10.11
+31 silly idealTree +-- @interactjs/auto-scroll@1.10.11
+31 silly idealTree +-- @interactjs/auto-start@1.10.11
+31 silly idealTree +-- @interactjs/core@1.10.11
+31 silly idealTree +-- @interactjs/dev-tools@1.10.11
+31 silly idealTree +-- @interactjs/inertia@1.10.11
+31 silly idealTree +-- @interactjs/interact@1.10.11
+31 silly idealTree +-- @interactjs/interactjs@1.10.11
+31 silly idealTree +-- @interactjs/modifiers@1.10.11
+31 silly idealTree +-- @interactjs/offset@1.10.11
+31 silly idealTree +-- @interactjs/pointer-events@1.10.11
+31 silly idealTree +-- @interactjs/reflow@1.10.11
+31 silly idealTree +-- @interactjs/snappers@1.10.11
+31 silly idealTree +-- @interactjs/types@1.10.11
+31 silly idealTree +-- @interactjs/utils@1.10.11
+31 silly idealTree +-- @mapbox/geojson-rewind@0.5.2
+31 silly idealTree +-- @mapbox/geojson-types@1.0.2
+31 silly idealTree +-- @mapbox/jsonlint-lines-primitives@2.0.2
+31 silly idealTree +-- @mapbox/mapbox-gl-supported@1.5.0
+31 silly idealTree +-- @mapbox/point-geometry@0.1.0
+31 silly idealTree +-- @mapbox/tiny-sdf@1.2.5
+31 silly idealTree +-- @mapbox/unitbezier@0.0.0
+31 silly idealTree +-- @mapbox/vector-tile@1.3.1
+31 silly idealTree +-- @mapbox/whoots-js@3.1.0
+31 silly idealTree +-- @nuxt/opencollective@0.3.2
+31 silly idealTree +-- @plotly/d3-sankey-circular@0.33.1
+31 silly idealTree +-- @plotly/d3-sankey@0.7.2
+31 silly idealTree +-- @plotly/point-cluster@3.1.9
+31 silly idealTree +-- @turf/area@6.5.0
+31 silly idealTree +-- @turf/bbox@6.5.0
+31 silly idealTree +-- @turf/centroid@6.5.0
+31 silly idealTree +-- @turf/helpers@6.5.0
+31 silly idealTree +-- @turf/meta@6.5.0
+31 silly idealTree +-- @tweenjs/tween.js@17.6.0
+31 silly idealTree +-- @vue/composition-api@1.4.9
+31 silly idealTree +-- 3d-view@2.0.1
+31 silly idealTree +-- a-big-triangle@1.0.3
+31 silly idealTree +-- abs-svg-path@0.1.1
+31 silly idealTree +-- acorn@7.4.1
+31 silly idealTree +-- add-line-numbers@1.0.1
+31 silly idealTree +-- affine-hull@1.0.0
+31 silly idealTree +-- almost-equal@1.1.0
+31 silly idealTree +-- alpha-complex@1.0.0
+31 silly idealTree +-- alpha-shape@1.0.0
+31 silly idealTree +-- ansi-styles@4.3.0
+31 silly idealTree +-- arr-flatten@1.1.0
+31 silly idealTree +-- array-bounds@1.0.1
+31 silly idealTree +-- array-find-index@1.0.2
+31 silly idealTree +-- array-normalize@1.1.4
+31 silly idealTree +-- array-range@1.0.1
+31 silly idealTree +-- array-rearrange@2.2.2
+31 silly idealTree +-- atob-lite@1.0.0
+31 silly idealTree +-- barycentric@1.0.1
+31 silly idealTree +-- batch-processor@1.0.0
+31 silly idealTree +-- big-rat@1.0.4
+31 silly idealTree +-- binary-search-bounds@2.0.5
+31 silly idealTree +-- bit-twiddle@1.0.2
+31 silly idealTree +-- bitmap-sdf@1.0.4
+31 silly idealTree +-- bl@2.2.1
+31 silly idealTree | +-- isarray@1.0.0
+31 silly idealTree | +-- readable-stream@2.3.7
+31 silly idealTree | | `-- safe-buffer@5.1.2
+31 silly idealTree | `-- string_decoder@1.1.1
+31 silly idealTree |   `-- safe-buffer@5.1.2
+31 silly idealTree +-- bn.js@4.12.0
+31 silly idealTree +-- bootstrap-vue@2.22.0
+31 silly idealTree +-- bootstrap@4.6.1
+31 silly idealTree +-- boundary-cells@2.0.2
+31 silly idealTree +-- box-intersect@1.0.2
+31 silly idealTree +-- buffer-from@1.1.2
+31 silly idealTree +-- canvas-fit@1.5.0
+31 silly idealTree +-- cdt2d@1.0.0
+31 silly idealTree +-- cell-orientation@1.0.1
+31 silly idealTree +-- chalk@4.1.2
+31 silly idealTree +-- circumcenter@1.0.0
+31 silly idealTree +-- circumradius@1.0.0
+31 silly idealTree +-- clamp@1.0.1
+31 silly idealTree +-- clean-pslg@1.1.2
+31 silly idealTree +-- color-alpha@1.0.4
+31 silly idealTree +-- color-convert@2.0.1
+31 silly idealTree +-- color-id@1.1.0
+31 silly idealTree +-- color-name@1.1.4
+31 silly idealTree +-- color-normalize@1.5.0
+31 silly idealTree +-- color-parse@1.3.8
+31 silly idealTree +-- color-rgba@2.1.1
+31 silly idealTree +-- color-space@1.16.0
+31 silly idealTree +-- colormap@2.3.2
+31 silly idealTree +-- commander@2.20.3
+31 silly idealTree +-- compare-angle@1.0.1
+31 silly idealTree +-- compare-cell@1.0.0
+31 silly idealTree +-- compare-oriented-cell@1.0.1
+31 silly idealTree +-- compute-dims@1.1.0
+31 silly idealTree +-- concat-stream@1.6.2
+31 silly idealTree | +-- isarray@1.0.0
+31 silly idealTree | +-- readable-stream@2.3.7
+31 silly idealTree | +-- safe-buffer@5.1.2
+31 silly idealTree | `-- string_decoder@1.1.1
+31 silly idealTree +-- consola@2.15.3
+31 silly idealTree +-- const-max-uint32@1.0.2
+31 silly idealTree +-- const-pinf-float64@1.0.0
+31 silly idealTree +-- convex-hull@1.0.3
+31 silly idealTree +-- core-js@3.22.7
+31 silly idealTree +-- core-util-is@1.0.3
+31 silly idealTree +-- country-regex@1.1.0
+31 silly idealTree +-- css-element-queries@1.2.3
+31 silly idealTree +-- css-font-size-keywords@1.0.0
+31 silly idealTree +-- css-font-stretch-keywords@1.0.1
+31 silly idealTree +-- css-font-style-keywords@1.0.1
+31 silly idealTree +-- css-font-weight-keywords@1.0.0
+31 silly idealTree +-- css-font@1.2.0
+31 silly idealTree +-- css-global-keywords@1.0.1
+31 silly idealTree +-- css-system-font-keywords@1.0.0
+31 silly idealTree +-- csscolorparser@1.0.3
+31 silly idealTree +-- cubic-hermite@1.0.0
+31 silly idealTree +-- cwise-compiler@1.1.3
+31 silly idealTree +-- d@1.0.1
+31 silly idealTree +-- d3-array@1.2.4
+31 silly idealTree +-- d3-collection@1.0.7
+31 silly idealTree +-- d3-color@1.4.1
+31 silly idealTree +-- d3-dispatch@1.0.6
+31 silly idealTree +-- d3-force@1.2.1
+31 silly idealTree +-- d3-hierarchy@1.1.9
+31 silly idealTree +-- d3-interpolate@1.4.0
+31 silly idealTree +-- d3-path@1.0.9
+31 silly idealTree +-- d3-quadtree@1.0.7
+31 silly idealTree +-- d3-shape@1.3.7
+31 silly idealTree +-- d3-time-format@2.3.0
+31 silly idealTree +-- d3-time@1.1.0
+31 silly idealTree +-- d3-timer@1.0.10
+31 silly idealTree +-- d3@3.5.17
+31 silly idealTree +-- deep-is@0.1.4
+31 silly idealTree +-- defined@1.0.0
+31 silly idealTree +-- delaunay-triangulate@1.1.6
+31 silly idealTree +-- detect-kerning@2.1.2
+31 silly idealTree +-- double-bits@1.1.1
+31 silly idealTree +-- draw-svg-path@1.0.0
+31 silly idealTree +-- dtype@2.0.0
+31 silly idealTree +-- dup@1.0.0
+31 silly idealTree +-- duplexify@3.7.1
+31 silly idealTree | +-- isarray@1.0.0
+31 silly idealTree | +-- readable-stream@2.3.7
+31 silly idealTree | +-- safe-buffer@5.1.2
+31 silly idealTree | `-- string_decoder@1.1.1
+31 silly idealTree +-- earcut@2.2.3
+31 silly idealTree +-- echarts@5.3.2
+31 silly idealTree +-- edges-to-adjacency-list@1.0.0
+31 silly idealTree +-- element-resize-detector@1.2.4
+31 silly idealTree +-- element-size@1.1.1
+31 silly idealTree +-- elementary-circuits-directed-graph@1.3.1
+31 silly idealTree +-- end-of-stream@1.4.4
+31 silly idealTree +-- es5-ext@0.10.61
+31 silly idealTree +-- es6-iterator@2.0.3
+31 silly idealTree +-- es6-promise@4.2.8
+31 silly idealTree +-- es6-symbol@3.1.3
+31 silly idealTree +-- es6-weak-map@2.0.3
+31 silly idealTree +-- escodegen@1.14.3
+31 silly idealTree +-- esprima@4.0.1
+31 silly idealTree +-- estraverse@4.3.0
+31 silly idealTree +-- esutils@2.0.3
+31 silly idealTree +-- events@3.3.0
+31 silly idealTree +-- ext@1.6.0
+31 silly idealTree | `-- type@2.6.0
+31 silly idealTree +-- extract-frustum-planes@1.0.0
+31 silly idealTree +-- falafel@2.2.5
+31 silly idealTree | `-- isarray@2.0.5
+31 silly idealTree +-- fast-isnumeric@1.1.4
+31 silly idealTree +-- fast-levenshtein@2.0.6
+31 silly idealTree +-- filtered-vector@1.2.5
+31 silly idealTree +-- flatten-vertex-data@1.0.2
+31 silly idealTree +-- flip-pixels@1.0.2
+31 silly idealTree +-- font-atlas@2.1.0
+31 silly idealTree +-- font-measure@1.2.2
+31 silly idealTree +-- from2@2.3.0
+31 silly idealTree | +-- isarray@1.0.0
+31 silly idealTree | +-- readable-stream@2.3.7
+31 silly idealTree | +-- safe-buffer@5.1.2
+31 silly idealTree | `-- string_decoder@1.1.1
+31 silly idealTree +-- function-bind@1.1.1
+31 silly idealTree +-- functional-red-black-tree@1.0.1
+31 silly idealTree +-- gamma@0.1.0
+31 silly idealTree +-- geojson-vt@3.2.1
+31 silly idealTree +-- get-canvas-context@1.0.2
+31 silly idealTree +-- get-stream@6.0.1
+31 silly idealTree +-- gl-axes3d@1.5.3
+31 silly idealTree +-- gl-buffer@2.1.2
+31 silly idealTree +-- gl-cone3d@1.5.2
+31 silly idealTree +-- gl-constants@1.0.0
+31 silly idealTree +-- gl-contour2d@1.1.7
+31 silly idealTree +-- gl-error3d@1.0.16
+31 silly idealTree +-- gl-fbo@2.0.5
+31 silly idealTree +-- gl-format-compiler-error@1.0.3
+31 silly idealTree +-- gl-heatmap2d@1.1.1
+31 silly idealTree +-- gl-line3d@1.2.1
+31 silly idealTree +-- gl-mat3@1.0.0
+31 silly idealTree +-- gl-mat4@1.2.0
+31 silly idealTree +-- gl-matrix@3.4.3
+31 silly idealTree +-- gl-mesh3d@2.3.1
+31 silly idealTree +-- gl-plot2d@1.4.5
+31 silly idealTree +-- gl-plot3d@2.4.7
+31 silly idealTree +-- gl-pointcloud2d@1.0.3
+31 silly idealTree +-- gl-quat@1.0.0
+31 silly idealTree +-- gl-scatter3d@1.2.3
+31 silly idealTree +-- gl-select-box@1.0.4
+31 silly idealTree +-- gl-select-static@2.0.7
+31 silly idealTree +-- gl-shader@4.3.1
+31 silly idealTree +-- gl-spikes2d@1.0.2
+31 silly idealTree +-- gl-spikes3d@1.0.10
+31 silly idealTree +-- gl-state@1.0.0
+31 silly idealTree +-- gl-streamtube3d@1.4.1
+31 silly idealTree +-- gl-surface3d@1.6.0
+31 silly idealTree +-- gl-text@1.3.1
+31 silly idealTree | `-- regl@2.1.0
+31 silly idealTree +-- gl-texture2d@2.1.0
+31 silly idealTree +-- gl-util@3.1.3
+31 silly idealTree +-- gl-vao@1.3.0
+31 silly idealTree +-- gl-vec3@1.1.3
+31 silly idealTree +-- gl-vec4@1.0.1
+31 silly idealTree +-- glsl-inject-defines@1.0.3
+31 silly idealTree +-- glsl-inverse@1.0.0
+31 silly idealTree +-- glsl-out-of-range@1.0.4
+31 silly idealTree +-- glsl-resolve@0.0.1
+31 silly idealTree | +-- resolve@0.6.3
+31 silly idealTree | `-- xtend@2.2.0
+31 silly idealTree +-- glsl-shader-name@1.0.0
+31 silly idealTree +-- glsl-specular-beckmann@1.1.2
+31 silly idealTree +-- glsl-specular-cook-torrance@2.0.1
+31 silly idealTree +-- glsl-token-assignments@2.0.2
+31 silly idealTree +-- glsl-token-defines@1.0.0
+31 silly idealTree +-- glsl-token-depth@1.1.2
+31 silly idealTree +-- glsl-token-descope@1.0.2
+31 silly idealTree +-- glsl-token-inject-block@1.1.0
+31 silly idealTree +-- glsl-token-properties@1.0.1
+31 silly idealTree +-- glsl-token-scope@1.1.2
+31 silly idealTree +-- glsl-token-string@1.0.1
+31 silly idealTree +-- glsl-token-whitespace-trim@1.0.0
+31 silly idealTree +-- glsl-tokenizer@2.1.5
+31 silly idealTree +-- glslify-bundle@5.1.1
+31 silly idealTree +-- glslify-deps@1.3.2
+31 silly idealTree +-- glslify@7.1.1
+31 silly idealTree | +-- isarray@1.0.0
+31 silly idealTree | +-- readable-stream@2.3.7
+31 silly idealTree | +-- safe-buffer@5.1.2
+31 silly idealTree | +-- string_decoder@1.1.1
+31 silly idealTree | `-- through2@2.0.5
+31 silly idealTree +-- graceful-fs@4.2.10
+31 silly idealTree +-- grid-index@1.1.0
+31 silly idealTree +-- has-flag@4.0.0
+31 silly idealTree +-- has-hover@1.0.1
+31 silly idealTree +-- has-passive-events@1.0.0
+31 silly idealTree +-- has@1.0.3
+31 silly idealTree +-- hsluv@0.0.3
+31 silly idealTree +-- http-vue-loader@1.4.2
+31 silly idealTree +-- ieee754@1.2.1
+31 silly idealTree +-- image-palette@2.1.0
+31 silly idealTree +-- image-size@0.7.5
+31 silly idealTree +-- incremental-convex-hull@1.0.1
+31 silly idealTree +-- inherits@2.0.4
+31 silly idealTree +-- intersection-observer@0.5.1
+31 silly idealTree +-- interval-tree-1d@1.0.4
+31 silly idealTree +-- invert-permutation@1.0.0
+31 silly idealTree +-- iota-array@1.0.0
+31 silly idealTree +-- is-base64@0.1.0
+31 silly idealTree +-- is-blob@2.1.0
+31 silly idealTree +-- is-browser@2.1.0
+31 silly idealTree +-- is-buffer@1.1.6
+31 silly idealTree +-- is-core-module@2.9.0
+31 silly idealTree +-- is-finite@1.1.0
+31 silly idealTree +-- is-firefox@1.0.3
+31 silly idealTree +-- is-float-array@1.0.0
+31 silly idealTree +-- is-iexplorer@1.0.0
+31 silly idealTree +-- is-mobile@2.2.2
+31 silly idealTree +-- is-obj@1.0.1
+31 silly idealTree +-- is-plain-obj@1.1.0
+31 silly idealTree +-- is-string-blank@1.0.1
+31 silly idealTree +-- is-svg-path@1.0.2
+31 silly idealTree +-- isarray@0.0.1
+31 silly idealTree +-- kdbush@3.0.0
+31 silly idealTree +-- lerp@1.0.3
+31 silly idealTree +-- levn@0.3.0
+31 silly idealTree +-- lodash.debounce@4.0.8
+31 silly idealTree +-- map-limit@0.0.1
+31 silly idealTree | `-- once@1.3.3
+31 silly idealTree +-- mapbox-gl@1.10.1
+31 silly idealTree +-- marching-simplex-table@1.0.0
+31 silly idealTree +-- mat4-decompose@1.0.4
+31 silly idealTree +-- mat4-interpolate@1.0.4
+31 silly idealTree +-- mat4-recompose@1.0.4
+31 silly idealTree +-- math-log2@1.0.1
+31 silly idealTree +-- matrix-camera-controller@2.1.4
+31 silly idealTree +-- minimist@1.2.6
+31 silly idealTree +-- moment@2.29.3
+31 silly idealTree +-- monotone-convex-hull-2d@1.0.1
+31 silly idealTree +-- mouse-change@1.4.0
+31 silly idealTree +-- mouse-event-offset@3.0.2
+31 silly idealTree +-- mouse-event@1.0.5
+31 silly idealTree +-- mouse-wheel@1.2.0
+31 silly idealTree | `-- signum@1.0.0
+31 silly idealTree +-- mumath@3.3.4
+31 silly idealTree +-- murmurhash-js@1.0.0
+31 silly idealTree +-- ndarray-extract-contour@1.0.1
+31 silly idealTree +-- ndarray-gradient@1.0.1
+31 silly idealTree +-- ndarray-linear-interpolate@1.0.0
+31 silly idealTree +-- ndarray-ops@1.2.2
+31 silly idealTree +-- ndarray-pack@1.2.1
+31 silly idealTree +-- ndarray-scratch@1.2.0
+31 silly idealTree +-- ndarray-sort@1.0.1
+31 silly idealTree +-- ndarray@1.0.19
+31 silly idealTree +-- next-tick@1.1.0
+31 silly idealTree +-- nextafter@1.0.0
+31 silly idealTree +-- node-fetch@2.6.7
+31 silly idealTree +-- normalize-svg-path@0.1.0
+31 silly idealTree +-- normals@1.1.0
+31 silly idealTree +-- number-is-integer@1.0.1
+31 silly idealTree +-- numeric@1.2.6
+31 silly idealTree +-- object-assign@4.1.1
+31 silly idealTree +-- object-keys@1.1.1
+31 silly idealTree +-- once@1.4.0
+31 silly idealTree +-- optionator@0.8.3
+31 silly idealTree +-- orbit-camera-controller@4.0.0
+31 silly idealTree +-- pad-left@1.0.2
+31 silly idealTree +-- parenthesis@3.1.8
+31 silly idealTree +-- parse-rect@1.2.0
+31 silly idealTree +-- parse-svg-path@0.1.2
+31 silly idealTree +-- parse-unit@1.0.1
+31 silly idealTree +-- path-parse@1.0.7
+31 silly idealTree +-- pbf@3.2.1
+31 silly idealTree +-- performance-now@2.1.0
+31 silly idealTree +-- permutation-parity@1.0.0
+31 silly idealTree +-- permutation-rank@1.0.0
+31 silly idealTree +-- pick-by-alias@1.2.0
+31 silly idealTree +-- planar-dual@1.0.2
+31 silly idealTree +-- planar-graph-to-polyline@1.0.6
+31 silly idealTree +-- plotly.js@1.58.5
+31 silly idealTree +-- point-in-big-polygon@2.0.1
+31 silly idealTree +-- polybooljs@1.2.0
+31 silly idealTree +-- polytope-closest-point@1.0.0
+31 silly idealTree +-- popper.js@1.16.1
+31 silly idealTree +-- portal-vue@2.1.7
+31 silly idealTree +-- potpack@1.0.2
+31 silly idealTree +-- prelude-ls@1.1.2
+31 silly idealTree +-- process-nextick-args@2.0.1
+31 silly idealTree +-- protocol-buffers-schema@3.6.0
+31 silly idealTree +-- pxls@2.3.2
+31 silly idealTree | `-- is-buffer@2.0.5
+31 silly idealTree +-- quantize@1.0.2
+31 silly idealTree +-- quat-slerp@1.0.1
+31 silly idealTree +-- quickselect@2.0.0
+31 silly idealTree +-- raf@3.4.1
+31 silly idealTree +-- rat-vec@1.1.1
+31 silly idealTree +-- readable-stream@1.0.34
+31 silly idealTree +-- reduce-simplicial-complex@1.0.0
+31 silly idealTree +-- regex-regex@1.0.0
+31 silly idealTree +-- regl-error2d@2.0.12
+31 silly idealTree +-- regl-line2d@3.1.2
+31 silly idealTree +-- regl-scatter2d@3.2.8
+31 silly idealTree +-- regl-splom@1.0.14
+31 silly idealTree +-- regl@1.7.0
+31 silly idealTree +-- repeat-string@1.6.1
+31 silly idealTree +-- resolve-protobuf-schema@2.1.0
+31 silly idealTree +-- resolve@1.22.0
+31 silly idealTree +-- right-now@1.0.0
+31 silly idealTree +-- robust-compress@1.0.0
+31 silly idealTree +-- robust-determinant@1.1.0
+31 silly idealTree +-- robust-dot-product@1.0.0
+31 silly idealTree +-- robust-in-sphere@1.2.1
+31 silly idealTree +-- robust-linear-solve@1.0.0
+31 silly idealTree +-- robust-orientation@1.2.1
+31 silly idealTree +-- robust-product@1.0.0
+31 silly idealTree +-- robust-scale@1.0.2
+31 silly idealTree +-- robust-segment-intersect@1.0.1
+31 silly idealTree +-- robust-subtract@1.0.0
+31 silly idealTree +-- robust-sum@1.0.0
+31 silly idealTree +-- rw@1.3.3
+31 silly idealTree +-- safe-buffer@5.2.1
+31 silly idealTree +-- sane-topojson@4.0.0
+31 silly idealTree +-- shallow-copy@0.0.1
+31 silly idealTree +-- signum@0.0.0
+31 silly idealTree +-- simplicial-complex-boundary@1.0.1
+31 silly idealTree +-- simplicial-complex-contour@1.0.2
+31 silly idealTree +-- simplicial-complex@1.0.0
+31 silly idealTree +-- simplify-planar-graph@2.0.1
+31 silly idealTree | +-- bit-twiddle@0.0.2
+31 silly idealTree | +-- simplicial-complex@0.3.3
+31 silly idealTree | `-- union-find@0.0.4
+31 silly idealTree +-- slab-decomposition@1.0.3
+31 silly idealTree +-- source-map@0.6.1
+31 silly idealTree +-- split-polygon@1.0.0
+31 silly idealTree +-- sprintf-js@1.1.2
+31 silly idealTree +-- stack-trace@0.0.9
+31 silly idealTree +-- static-eval@2.1.0
+31 silly idealTree +-- stream-shift@1.0.1
+31 silly idealTree +-- string_decoder@0.10.31
+31 silly idealTree +-- string-split-by@1.0.0
+31 silly idealTree +-- string-to-arraybuffer@1.0.2
+31 silly idealTree | `-- atob-lite@2.0.0
+31 silly idealTree +-- strongly-connected-components@1.0.1
+31 silly idealTree +-- supercluster@7.1.5
+31 silly idealTree +-- superscript-text@1.0.0
+31 silly idealTree +-- supports-color@7.2.0
+31 silly idealTree +-- supports-preserve-symlinks-flag@1.0.0
+31 silly idealTree +-- surface-nets@1.0.2
+31 silly idealTree +-- svg-arc-to-cubic-bezier@3.2.0
+31 silly idealTree +-- svg-path-bounds@1.0.2
+31 silly idealTree | `-- normalize-svg-path@1.1.0
+31 silly idealTree +-- svg-path-sdf@1.1.3
+31 silly idealTree +-- text-cache@4.2.2
+31 silly idealTree +-- through2@0.6.5
+31 silly idealTree +-- tinycolor2@1.4.2
+31 silly idealTree +-- tinyqueue@2.0.3
+31 silly idealTree +-- to-array-buffer@3.2.0
+31 silly idealTree +-- to-float32@1.1.0
+31 silly idealTree +-- to-px@1.0.1
+31 silly idealTree +-- to-uint8@1.4.1
+31 silly idealTree +-- topojson-client@3.1.0
+31 silly idealTree +-- tr46@0.0.3
+31 silly idealTree +-- triangulate-hypercube@1.0.1
+31 silly idealTree +-- triangulate-polyline@1.0.3
+31 silly idealTree +-- tslib@2.3.0
+31 silly idealTree +-- turntable-camera-controller@3.0.1
+31 silly idealTree +-- two-product@1.0.2
+31 silly idealTree +-- two-sum@1.0.0
+31 silly idealTree +-- type-check@0.3.2
+31 silly idealTree +-- type-name@2.0.2
+31 silly idealTree +-- type@1.2.0
+31 silly idealTree +-- typedarray-pool@1.2.0
+31 silly idealTree +-- typedarray@0.0.6
+31 silly idealTree +-- union-find@1.0.2
+31 silly idealTree +-- uniq@1.0.1
+31 silly idealTree +-- unquote@1.1.1
+31 silly idealTree +-- update-diff@1.1.0
+31 silly idealTree +-- util-deprecate@1.0.2
+31 silly idealTree +-- utils-copy-error@1.0.1
+31 silly idealTree +-- utils-copy@1.1.1
+31 silly idealTree +-- utils-indexof@1.0.0
+31 silly idealTree +-- utils-regex-from-string@1.0.0
+31 silly idealTree +-- validate.io-array-like@1.0.2
+31 silly idealTree +-- validate.io-array@1.0.6
+31 silly idealTree +-- validate.io-buffer@1.0.2
+31 silly idealTree +-- validate.io-integer-primitive@1.0.0
+31 silly idealTree +-- validate.io-integer@1.0.5
+31 silly idealTree +-- validate.io-matrix-like@1.0.2
+31 silly idealTree +-- validate.io-ndarray-like@1.0.0
+31 silly idealTree +-- validate.io-nonnegative-integer@1.0.0
+31 silly idealTree +-- validate.io-number-primitive@1.0.0
+31 silly idealTree +-- validate.io-number@1.0.3
+31 silly idealTree +-- validate.io-positive-integer@1.0.0
+31 silly idealTree +-- validate.io-string-primitive@1.0.1
+31 silly idealTree +-- vectorize-text@3.2.2
+31 silly idealTree +-- vt-pbf@3.1.3
+31 silly idealTree +-- vue-functional-data-merge@3.1.0
+31 silly idealTree +-- vue-grid-layout@2.3.12
+31 silly idealTree +-- vue-plotly@1.1.0
+31 silly idealTree +-- vue-resize-directive@1.2.0
+31 silly idealTree +-- vue-smart-widget@0.6.1
+31 silly idealTree +-- vue-svg-gauge@1.2.1
+31 silly idealTree +-- vue@2.6.12
+31 silly idealTree +-- weak-map@1.0.8
+31 silly idealTree +-- weakmap-shim@1.1.1
+31 silly idealTree +-- webgl-context@2.2.0
+31 silly idealTree +-- webidl-conversions@3.0.1
+31 silly idealTree +-- whatwg-url@5.0.0
+31 silly idealTree +-- word-wrap@1.2.3
+31 silly idealTree +-- world-calendars@1.0.3
+31 silly idealTree +-- wrappy@1.0.2
+31 silly idealTree +-- xtend@4.0.2
+31 silly idealTree +-- zero-crossings@1.0.1
+31 silly idealTree `-- zrender@5.3.1
+32 silly install generateActionsToTake
+33 warn checkPermissions Missing write access to /data/uibuilder/node_modules/echarts
+34 timing stage:rollbackFailedOptional Completed in 0ms
+35 timing stage:runTopLevelLifecycles Completed in 3922ms
+36 silly saveTree uib_root@5.0.2
+36 silly saveTree +-- @vue/composition-api@1.4.9
+36 silly saveTree +-- bootstrap-vue@2.22.0
+36 silly saveTree | +-- @nuxt/opencollective@0.3.2
+36 silly saveTree | | +-- chalk@4.1.2
+36 silly saveTree | | | +-- ansi-styles@4.3.0
+36 silly saveTree | | | | `-- color-convert@2.0.1
+36 silly saveTree | | | |   `-- color-name@1.1.4
+36 silly saveTree | | | `-- supports-color@7.2.0
+36 silly saveTree | | |   `-- has-flag@4.0.0
+36 silly saveTree | | +-- consola@2.15.3
+36 silly saveTree | | `-- node-fetch@2.6.7
+36 silly saveTree | |   `-- whatwg-url@5.0.0
+36 silly saveTree | |     +-- tr46@0.0.3
+36 silly saveTree | |     `-- webidl-conversions@3.0.1
+36 silly saveTree | +-- bootstrap@4.6.1
+36 silly saveTree | +-- popper.js@1.16.1
+36 silly saveTree | +-- portal-vue@2.1.7
+36 silly saveTree | `-- vue-functional-data-merge@3.1.0
+36 silly saveTree +-- bootstrap@4.6.1
+36 silly saveTree +-- echarts@5.3.2
+36 silly saveTree | +-- tslib@2.3.0
+36 silly saveTree | `-- zrender@5.3.1
+36 silly saveTree +-- http-vue-loader@1.4.2
+36 silly saveTree +-- moment@2.29.3
+36 silly saveTree +-- vue-plotly@1.1.0
+36 silly saveTree | +-- core-js@3.22.7
+36 silly saveTree | +-- plotly.js@1.58.5
+36 silly saveTree | | +-- @plotly/d3-sankey-circular@0.33.1
+36 silly saveTree | | | +-- d3-array@1.2.4
+36 silly saveTree | | | +-- d3-collection@1.0.7
+36 silly saveTree | | | +-- d3-shape@1.3.7
+36 silly saveTree | | | | `-- d3-path@1.0.9
+36 silly saveTree | | | `-- elementary-circuits-directed-graph@1.3.1
+36 silly saveTree | | |   `-- strongly-connected-components@1.0.1
+36 silly saveTree | | +-- @plotly/d3-sankey@0.7.2
+36 silly saveTree | | +-- @plotly/point-cluster@3.1.9
+36 silly saveTree | | | +-- array-bounds@1.0.1
+36 silly saveTree | | | +-- binary-search-bounds@2.0.5
+36 silly saveTree | | | +-- clamp@1.0.1
+36 silly saveTree | | | +-- defined@1.0.0
+36 silly saveTree | | | +-- dtype@2.0.0
+36 silly saveTree | | | +-- flatten-vertex-data@1.0.2
+36 silly saveTree | | | +-- is-obj@1.0.1
+36 silly saveTree | | | +-- math-log2@1.0.1
+36 silly saveTree | | | +-- parse-rect@1.2.0
+36 silly saveTree | | | | `-- pick-by-alias@1.2.0
+36 silly saveTree | | | `-- pick-by-alias@1.2.0
+36 silly saveTree | | +-- @turf/area@6.5.0
+36 silly saveTree | | | +-- @turf/helpers@6.5.0
+36 silly saveTree | | | `-- @turf/meta@6.5.0
+36 silly saveTree | | +-- @turf/bbox@6.5.0
+36 silly saveTree | | +-- @turf/centroid@6.5.0
+36 silly saveTree | | +-- alpha-shape@1.0.0
+36 silly saveTree | | | +-- alpha-complex@1.0.0
+36 silly saveTree | | | | +-- circumradius@1.0.0
+36 silly saveTree | | | | | `-- circumcenter@1.0.0
+36 silly saveTree | | | | |   +-- dup@1.0.0
+36 silly saveTree | | | | |   `-- robust-linear-solve@1.0.0
+36 silly saveTree | | | | |     `-- robust-determinant@1.1.0
+36 silly saveTree | | | | |       +-- robust-compress@1.0.0
+36 silly saveTree | | | | |       +-- robust-scale@1.0.2
+36 silly saveTree | | | | |       | +-- two-product@1.0.2
+36 silly saveTree | | | | |       | `-- two-sum@1.0.0
+36 silly saveTree | | | | |       +-- robust-sum@1.0.0
+36 silly saveTree | | | | |       `-- two-product@1.0.2
+36 silly saveTree | | | | `-- delaunay-triangulate@1.1.6
+36 silly saveTree | | | |   +-- incremental-convex-hull@1.0.1
+36 silly saveTree | | | |   | +-- robust-orientation@1.2.1
+36 silly saveTree | | | |   | | `-- robust-subtract@1.0.0
+36 silly saveTree | | | |   | `-- simplicial-complex@1.0.0
+36 silly saveTree | | | |   |   +-- bit-twiddle@1.0.2
+36 silly saveTree | | | |   |   `-- union-find@1.0.2
+36 silly saveTree | | | |   `-- uniq@1.0.1
+36 silly saveTree | | | `-- simplicial-complex-boundary@1.0.1
+36 silly saveTree | | |   +-- boundary-cells@2.0.2
+36 silly saveTree | | |   `-- reduce-simplicial-complex@1.0.0
+36 silly saveTree | | |     +-- cell-orientation@1.0.1
+36 silly saveTree | | |     +-- compare-cell@1.0.0
+36 silly saveTree | | |     `-- compare-oriented-cell@1.0.1
+36 silly saveTree | | +-- canvas-fit@1.5.0
+36 silly saveTree | | | `-- element-size@1.1.1
+36 silly saveTree | | +-- color-alpha@1.0.4
+36 silly saveTree | | | `-- color-parse@1.3.8
+36 silly saveTree | | |   `-- is-plain-obj@1.1.0
+36 silly saveTree | | +-- color-normalize@1.5.0
+36 silly saveTree | | | `-- color-rgba@2.1.1
+36 silly saveTree | | |   `-- color-space@1.16.0
+36 silly saveTree | | |     +-- hsluv@0.0.3
+36 silly saveTree | | |     `-- mumath@3.3.4
+36 silly saveTree | | |       `-- almost-equal@1.1.0
+36 silly saveTree | | +-- color-parse@1.3.8
+36 silly saveTree | | +-- color-rgba@2.1.1
+36 silly saveTree | | +-- convex-hull@1.0.3
+36 silly saveTree | | | +-- affine-hull@1.0.0
+36 silly saveTree | | | `-- monotone-convex-hull-2d@1.0.1
+36 silly saveTree | | +-- country-regex@1.1.0
+36 silly saveTree | | +-- d3-force@1.2.1
+36 silly saveTree | | | +-- d3-dispatch@1.0.6
+36 silly saveTree | | | +-- d3-quadtree@1.0.7
+36 silly saveTree | | | `-- d3-timer@1.0.10
+36 silly saveTree | | +-- d3-hierarchy@1.1.9
+36 silly saveTree | | +-- d3-interpolate@1.4.0
+36 silly saveTree | | | `-- d3-color@1.4.1
+36 silly saveTree | | +-- d3-time-format@2.3.0
+36 silly saveTree | | | `-- d3-time@1.1.0
+36 silly saveTree | | +-- d3@3.5.17
+36 silly saveTree | | +-- delaunay-triangulate@1.1.6
+36 silly saveTree | | +-- es6-promise@4.2.8
+36 silly saveTree | | +-- fast-isnumeric@1.1.4
+36 silly saveTree | | | `-- is-string-blank@1.0.1
+36 silly saveTree | | +-- gl-cone3d@1.5.2
+36 silly saveTree | | | +-- colormap@2.3.2
+36 silly saveTree | | | | `-- lerp@1.0.3
+36 silly saveTree | | | +-- gl-buffer@2.1.2
+36 silly saveTree | | | | +-- ndarray-ops@1.2.2
+36 silly saveTree | | | | | `-- cwise-compiler@1.1.3
+36 silly saveTree | | | | +-- ndarray@1.0.19
+36 silly saveTree | | | | | +-- iota-array@1.0.0
+36 silly saveTree | | | | | `-- is-buffer@1.1.6
+36 silly saveTree | | | | `-- typedarray-pool@1.2.0
+36 silly saveTree | | | +-- gl-mat4@1.2.0
+36 silly saveTree | | | +-- gl-shader@4.3.1
+36 silly saveTree | | | | +-- gl-format-compiler-error@1.0.3
+36 silly saveTree | | | | | +-- add-line-numbers@1.0.1
+36 silly saveTree | | | | | | `-- pad-left@1.0.2
+36 silly saveTree | | | | | |   `-- repeat-string@1.6.1
+36 silly saveTree | | | | | +-- gl-constants@1.0.0
+36 silly saveTree | | | | | +-- glsl-shader-name@1.0.0
+36 silly saveTree | | | | | | +-- atob-lite@1.0.0
+36 silly saveTree | | | | | | `-- glsl-tokenizer@2.1.5
+36 silly saveTree | | | | | |   `-- through2@0.6.5
+36 silly saveTree | | | | | |     +-- readable-stream@1.0.34
+36 silly saveTree | | | | | |     | +-- core-util-is@1.0.3
+36 silly saveTree | | | | | |     | +-- inherits@2.0.4
+36 silly saveTree | | | | | |     | +-- isarray@0.0.1
+36 silly saveTree | | | | | |     | `-- string_decoder@0.10.31
+36 silly saveTree | | | | | |     `-- xtend@4.0.2
+36 silly saveTree | | | | | `-- sprintf-js@1.1.2
+36 silly saveTree | | | | `-- weakmap-shim@1.1.1
+36 silly saveTree | | | +-- gl-texture2d@2.1.0
+36 silly saveTree | | | +-- gl-vao@1.3.0
+36 silly saveTree | | | +-- gl-vec3@1.1.3
+36 silly saveTree | | | +-- glsl-inverse@1.0.0
+36 silly saveTree | | | +-- glsl-out-of-range@1.0.4
+36 silly saveTree | | | +-- glsl-specular-cook-torrance@2.0.1
+36 silly saveTree | | | | `-- glsl-specular-beckmann@1.1.2
+36 silly saveTree | | | +-- glslify@7.1.1
+36 silly saveTree | | | | +-- bl@2.2.1
+36 silly saveTree | | | | | +-- readable-stream@2.3.7
+36 silly saveTree | | | | | | +-- isarray@1.0.0
+36 silly saveTree | | | | | | +-- process-nextick-args@2.0.1
+36 silly saveTree | | | | | | +-- safe-buffer@5.1.2
+36 silly saveTree | | | | | | +-- string_decoder@1.1.1
+36 silly saveTree | | | | | | | `-- safe-buffer@5.1.2
+36 silly saveTree | | | | | | `-- util-deprecate@1.0.2
+36 silly saveTree | | | | | `-- safe-buffer@5.2.1
+36 silly saveTree | | | | +-- concat-stream@1.6.2
+36 silly saveTree | | | | | +-- buffer-from@1.1.2
+36 silly saveTree | | | | | +-- readable-stream@2.3.7
+36 silly saveTree | | | | | | +-- isarray@1.0.0
+36 silly saveTree | | | | | | +-- safe-buffer@5.1.2
+36 silly saveTree | | | | | | `-- string_decoder@1.1.1
+36 silly saveTree | | | | | `-- typedarray@0.0.6
+36 silly saveTree | | | | +-- duplexify@3.7.1
+36 silly saveTree | | | | | +-- end-of-stream@1.4.4
+36 silly saveTree | | | | | | `-- once@1.4.0
+36 silly saveTree | | | | | |   `-- wrappy@1.0.2
+36 silly saveTree | | | | | +-- readable-stream@2.3.7
+36 silly saveTree | | | | | | +-- isarray@1.0.0
+36 silly saveTree | | | | | | +-- safe-buffer@5.1.2
+36 silly saveTree | | | | | | `-- string_decoder@1.1.1
+36 silly saveTree | | | | | `-- stream-shift@1.0.1
+36 silly saveTree | | | | +-- falafel@2.2.5
+36 silly saveTree | | | | | +-- acorn@7.4.1
+36 silly saveTree | | | | | `-- isarray@2.0.5
+36 silly saveTree | | | | +-- from2@2.3.0
+36 silly saveTree | | | | | `-- readable-stream@2.3.7
+36 silly saveTree | | | | |   +-- isarray@1.0.0
+36 silly saveTree | | | | |   +-- safe-buffer@5.1.2
+36 silly saveTree | | | | |   `-- string_decoder@1.1.1
+36 silly saveTree | | | | +-- glsl-resolve@0.0.1
+36 silly saveTree | | | | | +-- resolve@0.6.3
+36 silly saveTree | | | | | `-- xtend@2.2.0
+36 silly saveTree | | | | +-- glsl-token-whitespace-trim@1.0.0
+36 silly saveTree | | | | +-- glslify-bundle@5.1.1
+36 silly saveTree | | | | | +-- glsl-inject-defines@1.0.3
+36 silly saveTree | | | | | | +-- glsl-token-inject-block@1.1.0
+36 silly saveTree | | | | | | `-- glsl-token-string@1.0.1
+36 silly saveTree | | | | | +-- glsl-token-defines@1.0.0
+36 silly saveTree | | | | | +-- glsl-token-depth@1.1.2
+36 silly saveTree | | | | | +-- glsl-token-descope@1.0.2
+36 silly saveTree | | | | | | +-- glsl-token-assignments@2.0.2
+36 silly saveTree | | | | | | +-- glsl-token-properties@1.0.1
+36 silly saveTree | | | | | | `-- glsl-token-scope@1.1.2
+36 silly saveTree | | | | | +-- glsl-token-scope@1.1.2
+36 silly saveTree | | | | | +-- glsl-token-string@1.0.1
+36 silly saveTree | | | | | +-- murmurhash-js@1.0.0
+36 silly saveTree | | | | | `-- shallow-copy@0.0.1
+36 silly saveTree | | | | +-- glslify-deps@1.3.2
+36 silly saveTree | | | | | +-- @choojs/findup@0.2.1
+36 silly saveTree | | | | | | `-- commander@2.20.3
+36 silly saveTree | | | | | +-- events@3.3.0
+36 silly saveTree | | | | | +-- graceful-fs@4.2.10
+36 silly saveTree | | | | | +-- map-limit@0.0.1
+36 silly saveTree | | | | | | `-- once@1.3.3
+36 silly saveTree | | | | | `-- resolve@1.22.0
+36 silly saveTree | | | | |   +-- is-core-module@2.9.0
+36 silly saveTree | | | | |   | `-- has@1.0.3
+36 silly saveTree | | | | |   |   `-- function-bind@1.1.1
+36 silly saveTree | | | | |   +-- path-parse@1.0.7
+36 silly saveTree | | | | |   `-- supports-preserve-symlinks-flag@1.0.0
+36 silly saveTree | | | | +-- minimist@1.2.6
+36 silly saveTree | | | | +-- resolve@1.22.0
+36 silly saveTree | | | | +-- stack-trace@0.0.9
+36 silly saveTree | | | | +-- static-eval@2.1.0
+36 silly saveTree | | | | | `-- escodegen@1.14.3
+36 silly saveTree | | | | |   +-- esprima@4.0.1
+36 silly saveTree | | | | |   +-- estraverse@4.3.0
+36 silly saveTree | | | | |   +-- esutils@2.0.3
+36 silly saveTree | | | | |   +-- optionator@0.8.3
+36 silly saveTree | | | | |   | +-- deep-is@0.1.4
+36 silly saveTree | | | | |   | +-- fast-levenshtein@2.0.6
+36 silly saveTree | | | | |   | +-- levn@0.3.0
+36 silly saveTree | | | | |   | | +-- prelude-ls@1.1.2
+36 silly saveTree | | | | |   | | `-- type-check@0.3.2
+36 silly saveTree | | | | |   | +-- prelude-ls@1.1.2
+36 silly saveTree | | | | |   | +-- type-check@0.3.2
+36 silly saveTree | | | | |   | `-- word-wrap@1.2.3
+36 silly saveTree | | | | |   `-- source-map@0.6.1
+36 silly saveTree | | | | `-- through2@2.0.5
+36 silly saveTree | | | |   `-- readable-stream@2.3.7
+36 silly saveTree | | | |     +-- isarray@1.0.0
+36 silly saveTree | | | |     +-- safe-buffer@5.1.2
+36 silly saveTree | | | |     `-- string_decoder@1.1.1
+36 silly saveTree | | | `-- ndarray@1.0.19
+36 silly saveTree | | +-- gl-contour2d@1.1.7
+36 silly saveTree | | | +-- cdt2d@1.0.0
+36 silly saveTree | | | | `-- robust-in-sphere@1.2.1
+36 silly saveTree | | | +-- clean-pslg@1.1.2
+36 silly saveTree | | | | +-- big-rat@1.0.4
+36 silly saveTree | | | | | +-- bn.js@4.12.0
+36 silly saveTree | | | | | `-- double-bits@1.1.1
+36 silly saveTree | | | | +-- box-intersect@1.0.2
+36 silly saveTree | | | | +-- nextafter@1.0.0
+36 silly saveTree | | | | +-- rat-vec@1.1.1
+36 silly saveTree | | | | `-- robust-segment-intersect@1.0.1
+36 silly saveTree | | | `-- surface-nets@1.0.2
+36 silly saveTree | | |   +-- ndarray-extract-contour@1.0.1
+36 silly saveTree | | |   +-- triangulate-hypercube@1.0.1
+36 silly saveTree | | |   | +-- gamma@0.1.0
+36 silly saveTree | | |   | +-- permutation-parity@1.0.0
+36 silly saveTree | | |   | `-- permutation-rank@1.0.0
+36 silly saveTree | | |   |   `-- invert-permutation@1.0.0
+36 silly saveTree | | |   `-- zero-crossings@1.0.1
+36 silly saveTree | | +-- gl-error3d@1.0.16
+36 silly saveTree | | +-- gl-heatmap2d@1.1.1
+36 silly saveTree | | +-- gl-line3d@1.2.1
+36 silly saveTree | | +-- gl-mat4@1.2.0
+36 silly saveTree | | +-- gl-mesh3d@2.3.1
+36 silly saveTree | | | +-- barycentric@1.0.1
+36 silly saveTree | | | +-- normals@1.1.0
+36 silly saveTree | | | +-- polytope-closest-point@1.0.0
+36 silly saveTree | | | | `-- numeric@1.2.6
+36 silly saveTree | | | `-- simplicial-complex-contour@1.0.2
+36 silly saveTree | | |   +-- marching-simplex-table@1.0.0
+36 silly saveTree | | |   `-- ndarray-sort@1.0.1
+36 silly saveTree | | +-- gl-plot2d@1.4.5
+36 silly saveTree | | | +-- gl-select-static@2.0.7
+36 silly saveTree | | | | `-- gl-fbo@2.0.5
+36 silly saveTree | | | `-- text-cache@4.2.2
+36 silly saveTree | | |   `-- vectorize-text@3.2.2
+36 silly saveTree | | |     +-- planar-graph-to-polyline@1.0.6
+36 silly saveTree | | |     | +-- edges-to-adjacency-list@1.0.0
+36 silly saveTree | | |     | +-- planar-dual@1.0.2
+36 silly saveTree | | |     | | `-- compare-angle@1.0.1
+36 silly saveTree | | |     | |   +-- robust-product@1.0.0
+36 silly saveTree | | |     | |   `-- signum@0.0.0
+36 silly saveTree | | |     | `-- point-in-big-polygon@2.0.1
+36 silly saveTree | | |     |   +-- interval-tree-1d@1.0.4
+36 silly saveTree | | |     |   `-- slab-decomposition@1.0.3
+36 silly saveTree | | |     |     `-- functional-red-black-tree@1.0.1
+36 silly saveTree | | |     +-- simplify-planar-graph@2.0.1
+36 silly saveTree | | |     | `-- simplicial-complex@0.3.3
+36 silly saveTree | | |     |   +-- bit-twiddle@0.0.2
+36 silly saveTree | | |     |   `-- union-find@0.0.4
+36 silly saveTree | | |     `-- triangulate-polyline@1.0.3
+36 silly saveTree | | +-- gl-plot3d@2.4.7
+36 silly saveTree | | | +-- 3d-view@2.0.1
+36 silly saveTree | | | | +-- matrix-camera-controller@2.1.4
+36 silly saveTree | | | | | `-- mat4-interpolate@1.0.4
+36 silly saveTree | | | | |   +-- mat4-decompose@1.0.4
+36 silly saveTree | | | | |   +-- mat4-recompose@1.0.4
+36 silly saveTree | | | | |   `-- quat-slerp@1.0.1
+36 silly saveTree | | | | |     `-- gl-quat@1.0.0
+36 silly saveTree | | | | |       +-- gl-mat3@1.0.0
+36 silly saveTree | | | | |       `-- gl-vec4@1.0.1
+36 silly saveTree | | | | +-- orbit-camera-controller@4.0.0
+36 silly saveTree | | | | | `-- filtered-vector@1.2.5
+36 silly saveTree | | | | |   `-- cubic-hermite@1.0.0
+36 silly saveTree | | | | `-- turntable-camera-controller@3.0.1
+36 silly saveTree | | | +-- a-big-triangle@1.0.3
+36 silly saveTree | | | | `-- weak-map@1.0.8
+36 silly saveTree | | | +-- gl-axes3d@1.5.3
+36 silly saveTree | | | | +-- extract-frustum-planes@1.0.0
+36 silly saveTree | | | | +-- gl-state@1.0.0
+36 silly saveTree | | | | `-- split-polygon@1.0.0
+36 silly saveTree | | | |   `-- robust-dot-product@1.0.0
+36 silly saveTree | | | +-- gl-spikes3d@1.0.10
+36 silly saveTree | | | +-- has-passive-events@1.0.0
+36 silly saveTree | | | | `-- is-browser@2.1.0
+36 silly saveTree | | | +-- is-mobile@2.2.2
+36 silly saveTree | | | +-- mouse-change@1.4.0
+36 silly saveTree | | | | `-- mouse-event@1.0.5
+36 silly saveTree | | | +-- mouse-event-offset@3.0.2
+36 silly saveTree | | | +-- mouse-wheel@1.2.0
+36 silly saveTree | | | | +-- right-now@1.0.0
+36 silly saveTree | | | | +-- signum@1.0.0
+36 silly saveTree | | | | `-- to-px@1.0.1
+36 silly saveTree | | | |   `-- parse-unit@1.0.1
+36 silly saveTree | | | `-- right-now@1.0.0
+36 silly saveTree | | +-- gl-pointcloud2d@1.0.3
+36 silly saveTree | | +-- gl-scatter3d@1.2.3
+36 silly saveTree | | +-- gl-select-box@1.0.4
+36 silly saveTree | | +-- gl-spikes2d@1.0.2
+36 silly saveTree | | +-- gl-streamtube3d@1.4.1
+36 silly saveTree | | +-- gl-surface3d@1.6.0
+36 silly saveTree | | | +-- ndarray-gradient@1.0.1
+36 silly saveTree | | | +-- ndarray-pack@1.2.1
+36 silly saveTree | | | `-- ndarray-scratch@1.2.0
+36 silly saveTree | | +-- gl-text@1.3.1
+36 silly saveTree | | | +-- css-font@1.2.0
+36 silly saveTree | | | | +-- css-font-size-keywords@1.0.0
+36 silly saveTree | | | | +-- css-font-stretch-keywords@1.0.1
+36 silly saveTree | | | | +-- css-font-style-keywords@1.0.1
+36 silly saveTree | | | | +-- css-font-weight-keywords@1.0.0
+36 silly saveTree | | | | +-- css-global-keywords@1.0.1
+36 silly saveTree | | | | +-- css-system-font-keywords@1.0.0
+36 silly saveTree | | | | +-- string-split-by@1.0.0
+36 silly saveTree | | | | | `-- parenthesis@3.1.8
+36 silly saveTree | | | | `-- unquote@1.1.1
+36 silly saveTree | | | +-- detect-kerning@2.1.2
+36 silly saveTree | | | +-- es6-weak-map@2.0.3
+36 silly saveTree | | | | +-- d@1.0.1
+36 silly saveTree | | | | | +-- es5-ext@0.10.61
+36 silly saveTree | | | | | | +-- es6-iterator@2.0.3
+36 silly saveTree | | | | | | | `-- es6-symbol@3.1.3
+36 silly saveTree | | | | | | |   `-- ext@1.6.0
+36 silly saveTree | | | | | | |     `-- type@2.6.0
+36 silly saveTree | | | | | | +-- es6-symbol@3.1.3
+36 silly saveTree | | | | | | `-- next-tick@1.1.0
+36 silly saveTree | | | | | `-- type@1.2.0
+36 silly saveTree | | | | +-- es5-ext@0.10.61
+36 silly saveTree | | | | +-- es6-iterator@2.0.3
+36 silly saveTree | | | | `-- es6-symbol@3.1.3
+36 silly saveTree | | | +-- font-atlas@2.1.0
+36 silly saveTree | | | +-- font-measure@1.2.2
+36 silly saveTree | | | +-- gl-util@3.1.3
+36 silly saveTree | | | | +-- is-firefox@1.0.3
+36 silly saveTree | | | | +-- number-is-integer@1.0.1
+36 silly saveTree | | | | | `-- is-finite@1.1.0
+36 silly saveTree | | | | `-- object-assign@4.1.1
+36 silly saveTree | | | +-- object-assign@4.1.1
+36 silly saveTree | | | `-- regl@2.1.0
+36 silly saveTree | | +-- glslify@7.1.1
+36 silly saveTree | | +-- has-hover@1.0.1
+36 silly saveTree | | +-- has-passive-events@1.0.0
+36 silly saveTree | | +-- image-size@0.7.5
+36 silly saveTree | | +-- is-mobile@2.2.2
+36 silly saveTree | | +-- mapbox-gl@1.10.1
+36 silly saveTree | | | +-- @mapbox/geojson-rewind@0.5.2
+36 silly saveTree | | | | `-- get-stream@6.0.1
+36 silly saveTree | | | +-- @mapbox/geojson-types@1.0.2
+36 silly saveTree | | | +-- @mapbox/jsonlint-lines-primitives@2.0.2
+36 silly saveTree | | | +-- @mapbox/mapbox-gl-supported@1.5.0
+36 silly saveTree | | | +-- @mapbox/point-geometry@0.1.0
+36 silly saveTree | | | +-- @mapbox/tiny-sdf@1.2.5
+36 silly saveTree | | | +-- @mapbox/unitbezier@0.0.0
+36 silly saveTree | | | +-- @mapbox/vector-tile@1.3.1
+36 silly saveTree | | | +-- @mapbox/whoots-js@3.1.0
+36 silly saveTree | | | +-- csscolorparser@1.0.3
+36 silly saveTree | | | +-- earcut@2.2.3
+36 silly saveTree | | | +-- geojson-vt@3.2.1
+36 silly saveTree | | | +-- gl-matrix@3.4.3
+36 silly saveTree | | | +-- grid-index@1.1.0
+36 silly saveTree | | | +-- pbf@3.2.1
+36 silly saveTree | | | | +-- ieee754@1.2.1
+36 silly saveTree | | | | `-- resolve-protobuf-schema@2.1.0
+36 silly saveTree | | | |   `-- protocol-buffers-schema@3.6.0
+36 silly saveTree | | | +-- potpack@1.0.2
+36 silly saveTree | | | +-- quickselect@2.0.0
+36 silly saveTree | | | +-- rw@1.3.3
+36 silly saveTree | | | +-- supercluster@7.1.5
+36 silly saveTree | | | | `-- kdbush@3.0.0
+36 silly saveTree | | | +-- tinyqueue@2.0.3
+36 silly saveTree | | | `-- vt-pbf@3.1.3
+36 silly saveTree | | +-- matrix-camera-controller@2.1.4
+36 silly saveTree | | +-- mouse-change@1.4.0
+36 silly saveTree | | +-- mouse-event-offset@3.0.2
+36 silly saveTree | | +-- mouse-wheel@1.2.0
+36 silly saveTree | | +-- ndarray-linear-interpolate@1.0.0
+36 silly saveTree | | +-- ndarray@1.0.19
+36 silly saveTree | | +-- parse-svg-path@0.1.2
+36 silly saveTree | | +-- polybooljs@1.2.0
+36 silly saveTree | | +-- regl-error2d@2.0.12
+36 silly saveTree | | | +-- to-float32@1.1.0
+36 silly saveTree | | | `-- update-diff@1.1.0
+36 silly saveTree | | +-- regl-line2d@3.1.2
+36 silly saveTree | | | +-- array-find-index@1.0.2
+36 silly saveTree | | | `-- array-normalize@1.1.4
+36 silly saveTree | | +-- regl-scatter2d@3.2.8
+36 silly saveTree | | | +-- array-range@1.0.1
+36 silly saveTree | | | +-- array-rearrange@2.2.2
+36 silly saveTree | | | +-- color-id@1.1.0
+36 silly saveTree | | | +-- image-palette@2.1.0
+36 silly saveTree | | | | +-- pxls@2.3.2
+36 silly saveTree | | | | | +-- arr-flatten@1.1.0
+36 silly saveTree | | | | | +-- compute-dims@1.1.0
+36 silly saveTree | | | | | | +-- utils-copy@1.1.1
+36 silly saveTree | | | | | | | +-- const-pinf-float64@1.0.0
+36 silly saveTree | | | | | | | +-- object-keys@1.1.1
+36 silly saveTree | | | | | | | +-- type-name@2.0.2
+36 silly saveTree | | | | | | | +-- utils-copy-error@1.0.1
+36 silly saveTree | | | | | | | +-- utils-indexof@1.0.0
+36 silly saveTree | | | | | | | | +-- validate.io-array-like@1.0.2
+36 silly saveTree | | | | | | | | | +-- const-max-uint32@1.0.2
+36 silly saveTree | | | | | | | | | `-- validate.io-integer-primitive@1.0.0
+36 silly saveTree | | | | | | | | |   `-- validate.io-number-primitive@1.0.0
+36 silly saveTree | | | | | | | | `-- validate.io-integer-primitive@1.0.0
+36 silly saveTree | | | | | | | +-- utils-regex-from-string@1.0.0
+36 silly saveTree | | | | | | | | +-- regex-regex@1.0.0
+36 silly saveTree | | | | | | | | `-- validate.io-string-primitive@1.0.1
+36 silly saveTree | | | | | | | +-- validate.io-array@1.0.6
+36 silly saveTree | | | | | | | +-- validate.io-buffer@1.0.2
+36 silly saveTree | | | | | | | `-- validate.io-nonnegative-integer@1.0.0
+36 silly saveTree | | | | | | |   `-- validate.io-integer@1.0.5
+36 silly saveTree | | | | | | |     `-- validate.io-number@1.0.3
+36 silly saveTree | | | | | | +-- validate.io-array@1.0.6
+36 silly saveTree | | | | | | +-- validate.io-matrix-like@1.0.2
+36 silly saveTree | | | | | | +-- validate.io-ndarray-like@1.0.0
+36 silly saveTree | | | | | | `-- validate.io-positive-integer@1.0.0
+36 silly saveTree | | | | | +-- flip-pixels@1.0.2
+36 silly saveTree | | | | | +-- is-buffer@2.0.5
+36 silly saveTree | | | | | `-- to-uint8@1.4.1
+36 silly saveTree | | | | |   +-- is-base64@0.1.0
+36 silly saveTree | | | | |   +-- is-float-array@1.0.0
+36 silly saveTree | | | | |   `-- to-array-buffer@3.2.0
+36 silly saveTree | | | | |     +-- is-blob@2.1.0
+36 silly saveTree | | | | |     `-- string-to-arraybuffer@1.0.2
+36 silly saveTree | | | | |       `-- atob-lite@2.0.0
+36 silly saveTree | | | | `-- quantize@1.0.2
+36 silly saveTree | | | `-- is-iexplorer@1.0.0
+36 silly saveTree | | +-- regl-splom@1.0.14
+36 silly saveTree | | | `-- raf@3.4.1
+36 silly saveTree | | |   `-- performance-now@2.1.0
+36 silly saveTree | | +-- regl@1.7.0
+36 silly saveTree | | +-- right-now@1.0.0
+36 silly saveTree | | +-- robust-orientation@1.2.1
+36 silly saveTree | | +-- sane-topojson@4.0.0
+36 silly saveTree | | +-- strongly-connected-components@1.0.1
+36 silly saveTree | | +-- superscript-text@1.0.0
+36 silly saveTree | | +-- svg-path-sdf@1.1.3
+36 silly saveTree | | | +-- bitmap-sdf@1.0.4
+36 silly saveTree | | | +-- draw-svg-path@1.0.0
+36 silly saveTree | | | | +-- abs-svg-path@0.1.1
+36 silly saveTree | | | | `-- normalize-svg-path@0.1.0
+36 silly saveTree | | | +-- is-svg-path@1.0.2
+36 silly saveTree | | | `-- svg-path-bounds@1.0.2
+36 silly saveTree | | |   `-- normalize-svg-path@1.1.0
+36 silly saveTree | | |     `-- svg-arc-to-cubic-bezier@3.2.0
+36 silly saveTree | | +-- tinycolor2@1.4.2
+36 silly saveTree | | +-- to-px@1.0.1
+36 silly saveTree | | +-- topojson-client@3.1.0
+36 silly saveTree | | +-- webgl-context@2.2.0
+36 silly saveTree | | | `-- get-canvas-context@1.0.2
+36 silly saveTree | | `-- world-calendars@1.0.3
+36 silly saveTree | +-- vue-resize-directive@1.2.0
+36 silly saveTree | | +-- css-element-queries@1.2.3
+36 silly saveTree | | +-- intersection-observer@0.5.1
+36 silly saveTree | | `-- lodash.debounce@4.0.8
+36 silly saveTree | `-- vue@2.6.12
+36 silly saveTree +-- vue-smart-widget@0.6.1
+36 silly saveTree | `-- vue-grid-layout@2.3.12
+36 silly saveTree |   +-- @interactjs/actions@1.10.11
+36 silly saveTree |   | `-- @interactjs/interact@1.10.11
+36 silly saveTree |   |   +-- @interactjs/core@1.10.11
+36 silly saveTree |   |   +-- @interactjs/types@1.10.11
+36 silly saveTree |   |   `-- @interactjs/utils@1.10.11
+36 silly saveTree |   +-- @interactjs/auto-start@1.10.11
+36 silly saveTree |   +-- @interactjs/dev-tools@1.10.11
+36 silly saveTree |   +-- @interactjs/interactjs@1.10.11
+36 silly saveTree |   | +-- @interactjs/auto-scroll@1.10.11
+36 silly saveTree |   | +-- @interactjs/inertia@1.10.11
+36 silly saveTree |   | | `-- @interactjs/offset@1.10.11
+36 silly saveTree |   | +-- @interactjs/modifiers@1.10.11
+36 silly saveTree |   | | `-- @interactjs/snappers@1.10.11
+36 silly saveTree |   | +-- @interactjs/offset@1.10.11
+36 silly saveTree |   | +-- @interactjs/pointer-events@1.10.11
+36 silly saveTree |   | `-- @interactjs/reflow@1.10.11
+36 silly saveTree |   +-- @interactjs/modifiers@1.10.11
+36 silly saveTree |   `-- element-resize-detector@1.2.4
+36 silly saveTree |     `-- batch-processor@1.0.0
+36 silly saveTree +-- vue-svg-gauge@1.2.1
+36 silly saveTree | `-- @tweenjs/tween.js@17.6.0
+36 silly saveTree `-- vue@2.6.12
+37 warn bootstrap@4.6.1 requires a peer of jquery@1.9.1 - 3 but none is installed. You must install peer dependencies yourself.
+38 warn uib_root@5.0.2 No repository field.
+39 verbose stack Error: ENOENT: no such file or directory, access '/data/uibuilder/node_modules/echarts'
+40 verbose cwd /data/uibuilder
+41 verbose Linux 4.19.0-18-amd64
+42 verbose argv "/usr/local/bin/node" "/usr/local/bin/npm" "uninstall" "--save" "--color=false" "--no-fund" "--no-audit" "--no-update-notifier" "vue-echarts"
+43 verbose node v14.19.1
+44 verbose npm  v6.14.16
+45 error code ENOENT
+46 error syscall access
+47 error path /data/uibuilder/node_modules/echarts
+48 error errno -2
+49 error enoent ENOENT: no such file or directory, access '/data/uibuilder/node_modules/echarts'
+50 error enoent This is related to npm not being able to find a file.
+51 verbose exit [ -2, true ]

@@ -82,7 +82,7 @@ bucket = "cel86"
 
 query = '''
 from(bucket: "cel86")
-  |> range(start: -6h)
+  |> range(start: -12h)
   |> filter(fn: (r) => r["_measurement"] == "sensores")
   |> filter(fn: (r) => r["molde"] == "MT201")
   |> filter(fn: (r) => r._field == "value")
@@ -100,7 +100,6 @@ if set(['result','table']).issubset(med.columns):
 
 med.set_index("_time", inplace = True)
 
-# Data - Preprocessing
 
 ## NullValues
 
@@ -113,7 +112,7 @@ scaler = MinMaxScaler(feature_range=(-1, 0))
 scaled_data = scaler.fit_transform(dataset)
 
 # Defines the rolling window
-n_steps_in, n_steps_out = 1, 5
+n_steps_in, n_steps_out = 1, 15
 
 
 train = scaled_data[:-n_steps_out]
@@ -144,16 +143,13 @@ model.compile(optimizer='adam', loss='mse')
 model.fit(X_train, y_train, epochs=5)
 model.summary()
 
+model.save('/data/models/models/forecasting.h5')
+
 # Save model
 # filename="/data/models/models/forecasting.sav"
 # pickle.dump(model, open(filename,'wb'))
 
-model.save('/data/models/models/forecasting.h5')
-# tfjs.converters.save_keras_model(model, "/data/models/models")
 
-# Predict
-
-# 
 
 
 

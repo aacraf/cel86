@@ -1,0 +1,41 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--no-fund',
+1 verbose cli   '--no-audit',
+1 verbose cli   '--no-update-notifier',
+1 verbose cli   '--save',
+1 verbose cli   '--production',
+1 verbose cli   '--color=false',
+1 verbose cli   'vue-plotly-basic'
+1 verbose cli ]
+2 info using npm@6.14.16
+3 info using node@v14.19.1
+4 verbose npm-session c2555ca071262e75
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 http fetch GET 404 https://registry.npmjs.org/vue-plotly-basic 331ms
+8 http fetch GET 404 https://registry.npmjs.org/vue-plotly-basic 71ms
+9 silly fetchPackageMetaData error for vue-plotly-basic@latest 404 Not Found - GET https://registry.npmjs.org/vue-plotly-basic - Not found
+10 timing stage:rollbackFailedOptional Completed in 0ms
+11 timing stage:runTopLevelLifecycles Completed in 2593ms
+12 verbose stack Error: 404 Not Found - GET https://registry.npmjs.org/vue-plotly-basic - Not found
+12 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/npm-registry-fetch/check-response.js:117:15
+12 verbose stack     at processTicksAndRejections (internal/process/task_queues.js:95:5)
+13 verbose statusCode 404
+14 verbose pkgid vue-plotly-basic@latest
+15 verbose cwd /data/uibuilder
+16 verbose Linux 4.19.0-18-amd64
+17 verbose argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "--no-fund" "--no-audit" "--no-update-notifier" "--save" "--production" "--color=false" "vue-plotly-basic"
+18 verbose node v14.19.1
+19 verbose npm  v6.14.16
+20 error code E404
+21 error 404 Not Found - GET https://registry.npmjs.org/vue-plotly-basic - Not found
+22 error 404
+23 error 404 'vue-plotly-basic@latest' is not in the npm registry.
+24 error 404 You should bug the author to publish it (or use the name yourself!)
+25 error 404 Note that you can also install from a
+26 error 404 tarball, folder, http url, or git url.
+27 verbose exit [ 1, true ]
