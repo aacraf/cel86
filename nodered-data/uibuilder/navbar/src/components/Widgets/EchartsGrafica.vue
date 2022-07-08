@@ -1,6 +1,8 @@
 <template>
   <div class="page-line-chart">
-    <ve-line :x-axis="xAxis" :y-axis="yAxis" :title="title" :toolbox="toolbox" :tooltip="tooltip" :colors="chartColors" :data-zoom="chartDataZoom" :tooltip-visible="false" :series="series" :legend="legend" :resizeable="true" :mark-point="markPoint"></ve-line>
+    <ve-line :x-axis="xAxis" :y-axis="yAxis" :title="title" :toolbox="toolbox" :tooltip="tooltip" :colors="chartColors"
+      :data-zoom="chartDataZoom" :tooltip-visible="false" :series="series" :legend="legend" :resizeable="true"
+      :mark-point="markPoint" :mark-area="markArea" :mark-line="markLine" :visual-map="visualMap"></ve-line>
   </div>
 </template>
 
@@ -10,46 +12,61 @@ import moment from 'moment';
 moment.locale('es')
 
 export default {
-    props: {
-      SignalID: {
-          type: String,
-          required: true,
-      },
-      live: {
-          type: Boolean,
-          required: false,
-          default: false,
-      },
-      timesteps: {
-          type: String,
-          required: false,
-          default: '5m',
-      },
-      stopLoading: {
-          type: Function,
-          required: false,
-      },
+  props: {
+    SignalID: {
+      type: String,
+      required: true,
+    },
+    live: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    timesteps: {
+      type: String,
+      required: false,
+      default: '5m',
+    },
+    stopLoading: {
+      type: Function,
+      required: false,
+    },
   },
   data() {
     this.chartDataZoom = [{ type: 'slider' }];
     this.markPoint = {
-      data: [
-      ]
+      data: []
     };
+    this.markArea = {
+      silent: true,
+      itemStyle: {
+        // opacity: 0.3
+        color: 'rgba(255, 173, 177, 0.4)'
+      },
+      data: []
+    };
+
+    this.markLine = {
+      data: []
+    };
+
+    this.visualMap = [];
+
+
     return {
       legend: {
         data: ["Tolerancia Superior", "Medicion", "Modelo", "Tolerancia Inferior"],
-        
+
         // data: [ "Medicion"],
         selected: {
           "Tolerancia Superior": false,
           "Medicion": true,
           "Modelo": false,
           "Tolerancia Inferior": false
-          }
+        }
       },
       series: [
-          {
+        {
           type: 'line',
           name: 'Tolerancia Superior',
           data: [],
@@ -57,7 +74,7 @@ export default {
           showSymbol: false,
 
         },
-                        {
+        {
           type: 'line',
           name: 'Medicion',
           data: [],
@@ -119,7 +136,7 @@ export default {
         }
       },
       chartColors: [
-        "#FF0000","#247BA0", "orange", "#FF0000"
+        "#FF0000", "#247BA0", "orange", "#FF0000"
       ],
       chartData: {
         showSymbol: false,
@@ -147,55 +164,79 @@ export default {
       //   'Medicion': newMsg.payload.sensores.payload.Temp_Horno
       // })
       if (newMsg.topic == "queryInflux") {
-          const response = JSON.parse(newMsg.payload);
-           response.forEach(row => {
-              this.series[0].data.push({
-              name: moment(row._time).format("YYYY-MM-DD HH:mm:ss"),
-              value: [
-                moment(row._time).format("YYYY-MM-DD HH:mm:ss"),
-                row.value_max
-              ]})
-              this.series[1].data.push({
-              name: moment(row._time).format("YYYY-MM-DD HH:mm:ss"),
-              value: [
-                moment(row._time).format("YYYY-MM-DD HH:mm:ss"),
-                row.value
-              ]})
-              this.series[2].data.push({
-              name: moment(row._time).format("YYYY-MM-DD HH:mm:ss"),
-              value: [
-                moment(row._time).format("YYYY-MM-DD HH:mm:ss"),
-                row.forecast_15
-              ]})
-              this.series[3].data.push({
-              name: moment(row._time).format("YYYY-MM-DD HH:mm:ss"),
-              value: [
-                moment(row._time).format("YYYY-MM-DD HH:mm:ss"),
-                row.value_min
-              ]})
-
-              if(row.inyectada)
-              {
-                this.markPoint.data.push({
-                  name: 'Medicion',
-                  yAxis: row.value,
-                  xAxis: moment(row._time).format("YYYY-MM-DD HH:mm:ss"),
-                  value: "Inyectada",
-                })
-              }
-           })
-           this.stopLoading();
-           this.live = true;
-      }
-      if(this.live)
-      {
-        try{
+        const response = JSON.parse(newMsg.payload);
+        response.forEach(row => {
           this.series[0].data.push({
-              name: moment.utc(newMsg.payload.sensores.payload.FechaHora).format("YYYY-MM-DD HH:mm:ss"),
-              value: [
-                moment.utc(newMsg.payload.sensores.payload.FechaHora).format("YYYY-MM-DD HH:mm:ss"),
-                newMsg.payload.sensores.payload[this.SignalID+"_Max"]
-              ]
+            name: moment(row._time).subtract(2, 'm').format("YYYY-MM-DD HH:mm:ss"),
+            value: [
+              moment(row._time).subtract(2, 'm').format("YYYY-MM-DD HH:mm:ss"),
+              row.value_max
+            ],
+          })
+          this.series[1].data.push({
+            name: moment(row._time).subtract(2, 'm').format("YYYY-MM-DD HH:mm:ss"),
+            value: [
+              moment(row._time).subtract(2, 'm').format("YYYY-MM-DD HH:mm:ss"),
+              row.value
+            ]
+          })
+          this.series[2].data.push({
+            name: moment(row._time).subtract(2, 'm').format("YYYY-MM-DD HH:mm:ss"),
+            value: [
+              moment(row._time).subtract(2, 'm').format("YYYY-MM-DD HH:mm:ss"),
+              row.forecast_15
+            ]
+          })
+          this.series[3].data.push({
+            name: moment(row._time).subtract(2, 'm').format("YYYY-MM-DD HH:mm:ss"),
+            value: [
+              moment(row._time).subtract(2, 'm').format("YYYY-MM-DD HH:mm:ss"),
+              row.value_min
+            ]
+          })
+
+          if (row.inyectada) {
+            this.markPoint.data.push({
+              name: 'Medicion',
+              yAxis: row.value,
+              xAxis: moment(row._time).format("YYYY-MM-DD HH:mm:ss"),
+              value: "I",
+              symbolSize: 4,
+              symbol: 'arrow',
+              itemStyle: {
+                color: '#FF0000'
+              }
+            })
+          }
+
+          if(!row.cel_state)
+          {
+            
+          }
+
+          if (row.anomalia && row.cel_state) {
+            this.markArea.data.push([
+              {
+                // name: 'Anomalia',
+                xAxis: moment(row._time).subtract(1, 's').format("YYYY-MM-DD HH:mm:ss"),
+              },
+              {
+                xAxis: moment(row._time).format("YYYY-MM-DD HH:mm:ss")
+              }
+            ])
+          }
+        })
+        this.stopLoading();
+        this.live = true;
+      }
+      if (this.live) {
+        try {
+          this.series[0].data.push({
+            name: moment.utc(newMsg.payload.sensores.payload.FechaHora).format("YYYY-MM-DD HH:mm:ss"),
+            value: [
+              moment.utc(newMsg.payload.sensores.payload.FechaHora).format("YYYY-MM-DD HH:mm:ss"),
+              newMsg.payload.sensores.payload[this.SignalID + "_Max"]
+            ]
           })
           this.series[1].data.push({
             name: moment.utc(newMsg.payload.sensores.payload.FechaHora).format("YYYY-MM-DD HH:mm:ss"),
@@ -204,38 +245,42 @@ export default {
               newMsg.payload.sensores.payload[this.SignalID]
             ]
           })
-           this.series[2].data.push({
+          this.series[2].data.push({
             name: moment.utc(newMsg.payload.sensores.payload.FechaHora).format("YYYY-MM-DD HH:mm:ss"),
             value: [
               moment.utc(newMsg.payload.sensores.payload.FechaHora).format("YYYY-MM-DD HH:mm:ss"),
               newMsg.payload.forecasting.payload[14][newMsg.payload.forecasting.signal_index[this.SignalID]]
             ]
           })
-           this.series[3].data.push({
+          this.series[3].data.push({
             name: moment.utc(newMsg.payload.sensores.payload.FechaHora).format("YYYY-MM-DD HH:mm:ss"),
             value: [
               moment.utc(newMsg.payload.sensores.payload.FechaHora).format("YYYY-MM-DD HH:mm:ss"),
-              newMsg.payload.sensores.payload[this.SignalID+"_Min"]
+              newMsg.payload.sensores.payload[this.SignalID + "_Min"]
             ]
           })
-  
-          if(newMsg.payload.sensores.payload.Inyectada)
-          {
+
+          if (newMsg.payload.sensores.payload.Inyectada) {
             this.markPoint.data.push({
               name: 'Medicion',
               yAxis: newMsg.payload.sensores.payload[this.SignalID],
               xAxis: moment.utc(newMsg.payload.sensores.payload.FechaHora).format("YYYY-MM-DD HH:mm:ss"),
-              value: "Inyectada",
+              value: "I",
+              symbolSize: 4,
+              symbol: 'arrow',
+              itemStyle: {
+                color: '#FF0000'
+              }
             })
           }
         }
-        catch(e){
+        catch (e) {
           console.log(e)
         }
       }
     });
 
-     
+
   }
 };
 </script>

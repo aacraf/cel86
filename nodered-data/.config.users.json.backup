@@ -14,9 +14,18 @@
             },
             "tours": {
                 "welcome": "2.2.2"
+            },
+            "sidebar": {
+                "order": [
+                    "info",
+                    "debug",
+                    "help",
+                    "config",
+                    "context"
+                ]
             }
         },
-        "menu-menu-item-sidebar": true,
-        "menu-menu-item-palette": true
+        "menu-menu-item-sidebar": false,
+        "menu-menu-item-palette": false
     }
 }

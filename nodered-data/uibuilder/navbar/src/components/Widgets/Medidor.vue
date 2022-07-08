@@ -1,23 +1,19 @@
 
 <template>
-      <div v-if="error">
-        <p>Error: Esta señal no tiene definidos los límites de tolerancia</p>
-      </div>
-      <div v-else>
+      <div>
         <VueSvgGauge
-          :start-angle="-110"
-          :end-angle="110"
+          :start-angle="parseInt(-110)"
+          :end-angle="parseInt(110)"
           :value="value"
-          :separator-step="1"
+          :separator-step="0"
           :min="minvalue"
           :max="maxvalue"
           :gauge-color="[{ offset: 0, color: '#347AB0'}, { offset: 100, color: '#8CDFAD'}]"
-          :scale-interval="0.1"
         >
-        <div class="inner-text inner-text--3">
-            <span>{{ value }}</span>
-        </div>
-        <h3 class="customizer-title">{{this.SignalID}}</h3>
+          <h4 class="customizer-title" style="margin: 70px 0px 5px 55px !important">{{this.SignalID}}</h4>
+          <div class="inner-text inner-text--3"  style="margin: 5px 0px 5px 65px !important">
+              <span>{{ value.toFixed(4) }}</span>
+          </div>
         </VueSvgGauge>
       </div>
 </template>
@@ -60,7 +56,6 @@ export default defineComponent({
         this.value = newMsg.payload.sensores.payload[this.SignalID];
       }
       catch(e){
-        this.error = true;
       }
     });
 
@@ -73,10 +68,9 @@ export default defineComponent({
 
 <style scoped>
     .customizer-title {
-        font-size: 20px;
-        margin: 10px 0 0 0;
+        font-size: 15px;
     }
-    .inner-text {
+    /* .inner-text {
       &--1, &--3 {
         display: flex;
         justify-content: center;
@@ -97,7 +91,7 @@ export default defineComponent({
         color: #de3a21;
         font-weight: bold;
         span { max-width: 90px };
-      }
-    }
+      } */
+    /* } */
 
 </style>

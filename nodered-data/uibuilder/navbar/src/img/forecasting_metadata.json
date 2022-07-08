@@ -1,0 +1,1 @@
+{"ventana de tiempo": "48h", "numero de mediciones": 169677, "pasos a predecir": 20, "conjunto de entrenamiento": 144225, "conjunto de test": 25452, "variables entrada": 17, "epochs": "20", "inicio entrenamiento": "25/06/2022 03:23:17", "final entrenamiento": "25/06/2022 03:56:01", "tiempo entrenamiento": "0:32:44.003804", "RMSE test": "0.17599717"}

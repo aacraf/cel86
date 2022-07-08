@@ -1,0 +1,46 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'start',
+1 verbose cli   '--cache',
+1 verbose cli   '/data/.npm',
+1 verbose cli   '--',
+1 verbose cli   '--userDir',
+1 verbose cli   '/data'
+1 verbose cli ]
+2 info using npm@6.14.16
+3 info using node@v14.19.1
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle node-red-docker@2.2.2~prestart: node-red-docker@2.2.2
+6 info lifecycle node-red-docker@2.2.2~start: node-red-docker@2.2.2
+7 verbose lifecycle node-red-docker@2.2.2~start: unsafe-perm in lifecycle true
+8 verbose lifecycle node-red-docker@2.2.2~start: PATH: /usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/usr/src/node-red/node_modules/.bin:/opt/conda/bin:/usr/src/node-red/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+9 verbose lifecycle node-red-docker@2.2.2~start: CWD: /usr/src/node-red
+10 silly lifecycle node-red-docker@2.2.2~start: Args: [
+10 silly lifecycle   '-c',
+10 silly lifecycle   'node $NODE_OPTIONS node_modules/node-red/red.js $FLOWS "--userDir" "/data"'
+10 silly lifecycle ]
+11 silly lifecycle node-red-docker@2.2.2~start: Returned: code: 1  signal: null
+12 info lifecycle node-red-docker@2.2.2~start: Failed to exec start script
+13 verbose stack Error: node-red-docker@2.2.2 start: `node $NODE_OPTIONS node_modules/node-red/red.js $FLOWS "--userDir" "/data"`
+13 verbose stack Exit status 1
+13 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/index.js:332:16)
+13 verbose stack     at EventEmitter.emit (events.js:400:28)
+13 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/lib/spawn.js:55:14)
+13 verbose stack     at ChildProcess.emit (events.js:400:28)
+13 verbose stack     at maybeClose (internal/child_process.js:1058:16)
+13 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:293:5)
+14 verbose pkgid node-red-docker@2.2.2
+15 verbose cwd /usr/src/node-red
+16 verbose Linux 4.19.0-18-amd64
+17 verbose argv "/usr/local/bin/node" "/usr/local/bin/npm" "start" "--cache" "/data/.npm" "--" "--userDir" "/data"
+18 verbose node v14.19.1
+19 verbose npm  v6.14.16
+20 error code ELIFECYCLE
+21 error errno 1
+22 error node-red-docker@2.2.2 start: `node $NODE_OPTIONS node_modules/node-red/red.js $FLOWS "--userDir" "/data"`
+22 error Exit status 1
+23 error Failed at the node-red-docker@2.2.2 start script.
+23 error This is probably not a problem with npm. There is likely additional logging output above.
+24 verbose exit [ 1, true ]

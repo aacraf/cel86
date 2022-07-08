@@ -1,15 +1,17 @@
 <template>
-    <smart-widget fullscreen refresh :title="this.type" @on-refresh="handleRefresh" :loading="loading" :key="componentKey">
+    <smart-widget fullscreen refresh :title="this.type" @on-refresh="handleRefresh" :loading="loading"
+        :key="componentKey">
         <template slot="editbox" v-if="alarm">
-           <b-alert show :variant="alarm.type">{{alarm.msg}}</b-alert>
-          </template>
+            <b-alert show :variant="alarm.type">{{ alarm.msg }}</b-alert>
+        </template>
         <template slot="toolbar">
-            <div style="margin: 0 12px;">
+            <div style="margin: 0 12 5 10px;">
                 <b-icon-x-square v-on:click="removeWidgetParent(gridindex)" size="1x"></b-icon-x-square>
             </div>
         </template>
         <div v-if="type == 'PlotlyGrafica'">
-            <PlotlyGrafica :SignalID="SignalID" :timesteps="params.timesteps" :stopLoading="stopLoading"></PlotlyGrafica>
+            <PlotlyGrafica :SignalID="SignalID" :timesteps="params.timesteps" :stopLoading="stopLoading">
+            </PlotlyGrafica>
         </div>
         <div v-else-if="type == 'Medidor'">
             <Medidor :SignalID="SignalID" :stopLoading="stopLoading"></Medidor>
@@ -18,7 +20,8 @@
             <ApexGrafica :SignalID="SignalID" :stopLoading="stopLoading"></ApexGrafica>
         </div>
         <div v-else-if="type == 'EchartsGrafica'">
-            <EchartsGrafica :SignalID="SignalID" :timesteps="params.timesteps" :stopLoading="stopLoading"></EchartsGrafica>
+            <EchartsGrafica :SignalID="SignalID" :timesteps="params.timesteps" :stopLoading="stopLoading">
+            </EchartsGrafica>
         </div>
     </smart-widget>
 </template>
@@ -68,7 +71,7 @@ export default {
             required: false,
             default: {},
         },
-       
+
     },
     data() {
         return {
@@ -82,7 +85,7 @@ export default {
         },
         handleRefresh(index) {
             this.loading = true;
-            this.componentKey += 1;  
+            this.componentKey += 1;
             // setTimeout(() => {
             //     this.loading = false
             // }, 2000)

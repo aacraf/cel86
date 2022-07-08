@@ -3,7 +3,7 @@
     <apexchart
       width="100%"
       height="100%"
-      type="area"
+      type="line"
       :options="options"
       :series="series"
     ></apexchart>
@@ -59,7 +59,7 @@ export default defineComponent({
             }
           }
         },
-        colors: ["#FF0000", "#247BA0", "#ffb81f","#FF0000"],
+        colors: ["#247BA0"],
         fill: {
           type: "gradient",
         },
@@ -77,9 +77,9 @@ export default defineComponent({
           points: [],
           xaxis: []
         },
-        // forecastDataPoints: {
-        //   count: 3
-        // },
+        forecastDataPoints: {
+          count: 20
+        },
         stroke : {
           curve: 'smooth',
           dashArray: [0, 0, 5, 0],
@@ -100,19 +100,7 @@ export default defineComponent({
       },
       series: [
         {
-          name: "Tolerancia Superior",
-          data: [],
-        },
-        {
           name: "Medicion",
-          data: [],
-        },
-        {
-          name: "Modelo",
-          data: [],
-        },
-        {
-          name: "Tolerancia Inferior",
           data: [],
         },
       ],
@@ -156,15 +144,29 @@ export default defineComponent({
         }
       }
 
-      // this.series[0].data.push({ x: timestamp, y: med[this.SignalID+"_Max"] });
-      this.series[1].data.push({ x: timestamp, y: med.sensores.payload[this.SignalID] });
-      this.series[2].data.push({ x: timestamp, y: med.forecasting.payload[14][med.forecasting.signal_index[this.SignalID]] });
-      // if(this.series[1].data.length > 10)
-      // {
-      //   this.series[1].data.shift();
-      //   this.series[2].data.shift();
-      // }
-      // this.series[2].data.push({ x: timestamp, y: med[this.SignalID+"_Min"] });
+      if(anomalia)
+      {
+        this.addAnomaly();
+      }
+
+      if(this.series[0].data.length)
+      {
+        for(let i = 0; i<20; i++)
+        {
+          this.series[0].data.pop()
+        }
+
+        if(this.series[0].data.length > 80)
+        {
+          this.series[0].data.shift()
+        }
+      }
+      this.series[0].data.push({ x: timestamp, y: med.sensores.payload[this.SignalID].toFixed(3) });
+      for(let i = 0; i<20; i++)
+      {
+        timestamp = moment(timestamp).add(1, 'second').valueOf()
+        this.series[0].data.push({x:timestamp, y: med.forecasting.payload[i][med.forecasting.signal_index[this.SignalID]].toFixed(3)})
+      }
       this.series = [...this.series];
     },
 
@@ -172,9 +174,9 @@ export default defineComponent({
       let xaxis = this.options.annotations.xaxis;
       let points = this.options.annotations.points;
       xaxis.push({
-          x: this.series[1].data[ this.series[1].data.length-2].x,
-          x2: this.series[1].data[ this.series[1].data.length-1].x,
-          fillColor: 'darkgray',
+          x: this.series[0].data[ this.series[0].data.length-(2+20)].x,
+          x2: this.series[0].data[ this.series[0].data.length-(1+20)].x,
+          fillColor: 'red',
       });
       this.options = 
       {...this.options,
@@ -184,39 +186,6 @@ export default defineComponent({
         },
       }
     },
-    addForecasting(timesteps)
-    {
-      let last_med_timestamp =  this.series[1].data[this.series[1].data.length-1].x;
-      console.log("LAST: ",last_med_timestamp);
-      let newData = this.series[2].data
-      let next_timestep = moment(last_med_timestamp).add(2, 's').format("HH:mm:ss");
-      let datapoint_value = { x: last_med_timestamp, y: timesteps[0][12]};
-
-      newData.push(datapoint_value);
-      
-      this.series = [
-          {
-          name: "Tolerancia Maxima",
-          data: this.series[0].data,
-        },
-        {
-          name: med.tags.medicion,
-          data: newData,
-        },
-        {
-          name: "Modelo",
-          data: this.series[2].data,
-        },
-        {
-          name: "Tolerancia Minima",
-          data: this.series[3].data,
-        },
-      ];  
-
-
-    
-
-    }
   },
   mounted() {
     const fluxQuery = `

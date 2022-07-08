@@ -131,8 +131,8 @@ export default defineComponent({
                     this.data[0].y.push(row.value_max);
                     this.data[1].x.push(timestamp)
                     this.data[1].y.push(row.value);
-                    forecastvalues.push(parseFloat(row.forecast_15));
-                    if(forecastvalues.length == 15) {
+                    forecastvalues.push(parseFloat(row.forecast_20));
+                    if(forecastvalues.length == 20) {
                         this.data[2].x.push(timestamp)
                         this.data[2].y.push(forecastvalues.shift());
                     }
@@ -153,17 +153,33 @@ export default defineComponent({
                             arrowside: "end",
                         })
                     }
-                    if(row.anomalia)
+                    if(row.anomalia && row.cel_state)
                     {
                         this.layout.shapes.push({
                             type: 'line',
                             x0: timestamp,
                             // y0: 0,
                             x1: timestamp,
-                            // y1: row.value,
+                            y1: row.value,
                             opacity: 0.1,
                             line: {
-                                color: 'orange',
+                                color: 'red',
+                                width: 0.5
+                            }
+                        })
+                    }
+
+                    if(!row.cel_state)
+                    {
+                        this.layout.shapes.push({
+                            type: 'line',
+                            x0: timestamp,
+                            y0: 0,
+                            x1: timestamp,
+                            y1: row.value,
+                            opacity: 0.1,
+                            line: {
+                                color: 'grey',
                                 width: 0.5
                             }
                         })
