@@ -60,9 +60,7 @@ med = med.loc[:, (med != 0).any(axis=0)] # Valores a 0
 anom = validate_series(med, check_freq=True)
 
 
-
 # Modeling
-
 # Creando pipenet
 steps = {
     "pca": {
